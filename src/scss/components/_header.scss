@@ -3,7 +3,7 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
-    background-color: $background-color-dark-90;
+    background-color: $background-color;
     backdrop-filter: blur(.8rem);
     position: sticky;
 
@@ -30,6 +30,7 @@ header {
                 width: 15px;
                 height: 15px;
                 margin-right: 15px;
+                background-color: $gray-text;
             }
 
             &_input {
@@ -178,6 +179,7 @@ header {
                                     width: 100%;
                                     height: 100%;
                                     border-radius: 1rem 1rem 0 0;
+                                    object-fit: cover;
                                 }
                             }
 

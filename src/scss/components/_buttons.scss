@@ -17,3 +17,19 @@
         color: $white-text;
     }
 }
+
+.gameElement-button {
+    width: 200px;
+    height: 35px;
+    background-color: $purple-components;
+    color: $white-text;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: $size-1;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $purple-components-70;
+    }
+}
