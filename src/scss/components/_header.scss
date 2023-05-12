@@ -3,10 +3,11 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
-    background-color: $background-color;
+    background-color: $background-color-dark;
     backdrop-filter: blur(.8rem);
-    position: sticky;
-
+    position: fixed;
+    width: 100%;
+    
     .containerHeader {
         @include displayRow;
         width: 100%;
@@ -242,7 +243,7 @@ header {
             }
         }
         
-        .login {
+        .loginHeader {  
             padding: 0 1rem;
             cursor: pointer;
 

@@ -3,6 +3,7 @@
 // import { ButtonHeader } from '../components/buttons';
 // import { MySwiper } from '../components/Carousel';
 import { AutentifButton } from '../components/buttons';
+import { AutentifInput } from '../components/forms';
 
 const Login = () => {
 
@@ -17,8 +18,8 @@ const Login = () => {
                     <div className="login-wrapper-form">
                         <h1>Log in</h1>
                         <form action="">
-                            <input type="text" placeholder="Email or username" />
-                            <input type="password" placeholder="Password" />
+                        <AutentifInput type="text" placeholder="Email or username" />
+                        <AutentifInput type="password" placeholder="Password" />
                             <p>Register here if you dont have an account</p>
                             <AutentifButton text="Login"/>
                         </form>

@@ -98,7 +98,7 @@ const Header = ({ colectionMenuItems, onItemClick, toggleLogin, isLoggedIn }) =>
                 </div>
                </div>
             </div>
-            <div className="login">
+            <div className="loginHeader">
                 <button onClick={toggleLogin}>{isLoggedIn ? 'Hello marius' : 'Register / Login'}</button>
             </div>
         </div>

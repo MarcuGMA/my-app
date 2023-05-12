@@ -2,20 +2,23 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ButtonHeader } from '../components/buttons';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
+import 'swiper/scss/scrollbar';
 import SwiperElementsData from '../api/gamesData';
 
   export const MySwiper = () => {
   return (
     <Swiper className='mySwiper'
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
+      spaceBetween={100}
       slidesPerView={3}
-      navigation
-    //   pagination={{ clickable: true }}
+      navigation={{
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      }}
+      // pagination={{ clickable: true }}
     //   scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}>
@@ -25,16 +28,18 @@ import SwiperElementsData from '../api/gamesData';
                     <img src={item.image} alt="" />
                     <div className="swiperElement-info">
                         <div className="swiperElement-info-name">
-                            <h1>{item.name}</h1>
+                            <h2>{item.name}</h2>
                             <p>{item.price}</p>
                         </div>
-                        <div className="swiperElement-info">
+                        <div className="line"></div>
+                        <div className="swiperElement-info-store">
                             <p>{item.price}</p>
                             <p>{item.gameStore}</p>
-                            <ButtonHeader>VIEW GAME</ButtonHeader>
                         </div>
+                        <div className="line"></div>
+                        <ButtonHeader>VIEW GAME</ButtonHeader>
                     </div>
-                </div>
+                </div>  
             </SwiperSlide>
         ))}
     </Swiper>
