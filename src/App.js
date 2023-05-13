@@ -1,9 +1,11 @@
 import './scss/index.scss';
-import {BrowserRouter,Route,Routes} from 'react-router-dom';
-
+import React from 'react';
 import Main from './pages/Main';
-import Login from './pages/Login';
-import Register from './pages/Register';
+
+// import { Route,Routes,BrowserRouter } from 'react-router-dom';
+
+// import Login from './pages/Login';
+// import Register from './pages/Register';
 
 // const router = createBrowserRouter([
 //   {path: '/', element : <Main/>},
@@ -11,20 +13,22 @@ import Register from './pages/Register';
 //   {path: '/register', element : <Register/>},
 // ]);
 
-function App() {
 
+function App() {
   return (
-    <BrowserRouter>
-    <main>
-      <Routes>
-        <Route path="/" element={<Main/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/register" element={<Register/>}/>
-      </Routes> 
-    </main>
-    </BrowserRouter>
-  )
-  
+    <div className="App">
+    <Main/>
+    </div>
+    // <BrowserRouter>
+    // <main>
+    //   <Routes>
+    //     <Route path="/" element={<Main/>}/>
+    //     <Route path="/login" element={<Login/>}/>
+    //     <Route path="/register" element={<Register/>}/>
+    //   </Routes> 
+    // </main>
+    // </BrowserRouter>
+  );
 }
 
 export default App;

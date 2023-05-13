@@ -22,3 +22,19 @@
         font-size: 2rem;
     }
 }
+
+.anth-el {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color: $white-text;
+    font-size: 1.3rem;
+
+    p {
+        color:$white-text-70;
+        font-size: 2rem;
+    }
+}

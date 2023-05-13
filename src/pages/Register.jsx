@@ -1,5 +1,6 @@
 import { AutentifButton } from "../components/buttons";
 import { AutentifInput } from "../components/forms";
+import React from "react";
 
 const Register = () => {
     return (

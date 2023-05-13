@@ -1,6 +1,38 @@
+import React from 'react';
+import { useEffect, useState } from 'react';
+
 const Header = ({ colectionMenuItems, onItemClick, toggleLogin, isLoggedIn }) => {
+    const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollTop = window.pageYOffset;
+        if (scrollTop > 0) {
+          setScroll(true);
+        } else {
+          setScroll(false);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
+    const headerStyle = {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '60px',
+        backgroundColor: scroll ? '#050C13' : 'transparent',
+        transition: 'background-color 0.3s ease',
+      };
+
     return (
-        <header>
+        <header style={headerStyle}>
         <div className="containerHeader wrapper">
             <div className="logo">
                 <a href="index.html">

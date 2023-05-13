@@ -1,6 +1,8 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ButtonHeader } from '../components/buttons';
+import React from 'react';
+// import { useRef, useEffect  } from 'react';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -9,11 +11,29 @@ import 'swiper/scss/scrollbar';
 import SwiperElementsData from '../api/gamesData';
 
   export const MySwiper = () => {
+  //   const swiperRef = useRef(null);
+
+  // useEffect(() => {
+  //   const swiper = new Swiper(swiperRef.current, {
+  //     autoplay: {
+  //       delay: 3000, // Delay between slides in milliseconds
+  //     },
+  //   });
+
+  //   return () => {
+  //     swiper.destroy(); // Clean up Swiper instance on unmount
+  //   };
+  // }, []);
   return (
-    <Swiper className='mySwiper'
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+    <Swiper className='mySwiper' 
+      // ref={swiperRef}
+      modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay]}
       spaceBetween={100}
       slidesPerView={3}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       navigation={{
         prevEl: ".swiper-button-prev",
         nextEl: ".swiper-button-next",

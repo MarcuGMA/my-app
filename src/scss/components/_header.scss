@@ -3,10 +3,10 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
-    background-color: $background-color-dark;
     backdrop-filter: blur(.8rem);
     position: fixed;
     width: 100%;
+    z-index: 2;
     
     .containerHeader {
         @include displayRow;
