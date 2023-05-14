@@ -247,7 +247,7 @@ header {
             padding: 0 1rem;
             cursor: pointer;
 
-            button {
+            .loginHeaderLink {
                 color: $white-text;
                 text-decoration: none;
                 font-size: $size-0;

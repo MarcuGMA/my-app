@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react"
 
-export const AutentifButton = ({text}) => {
-  return <button className='autentificationButton'>{text}</button>;
-};
+export function AutentifButton({ text }) {
+  return <button type="submit" className="autentificationButton">{text}</button>
+}
 
-export const ButtonHeader = () => {
-  return <button className='gameElement-button'>VIEW GAME</button>;
-};  
-
-
-
+export function ButtonHeader() {
+  return <button className="gameElement-button">VIEW GAME</button>
+}
