@@ -37,7 +37,6 @@ function Login() {
   // }
 
   const handleSubmit = (event) => {
-    event.preventDefault()
     console.log(username, password);
   }
 
@@ -65,7 +64,8 @@ function Login() {
               {" "}
               <p>Register here if you dont have an account</p>{" "}
             </Link>
-            <AutentifButton text="Login" 
+            <AutentifButton
+              text="Login" 
               onClick={handleSubmit}
             />
           </form>

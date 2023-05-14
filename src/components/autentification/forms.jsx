@@ -1,5 +1,5 @@
-import React from "react"
+import React from "react";
 
-export function AutentifInput({ type, placeholder }) {
-  return <input type={type} placeholder={placeholder} />
+export function AutentifInput(props) {
+  return <input {...props} />
 }

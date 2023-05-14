@@ -1,7 +1,7 @@
 import React from "react"
 
-export function AutentifButton({ text }) {
-  return <button type="submit" className="autentificationButton">{text}</button>
+export function AutentifButton({ text, ...props }) {
+  return <button type="button" className="autentificationButton" {...props}>{text}</button>
 }
 
 export function ButtonHeader() {
