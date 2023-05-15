@@ -28,7 +28,7 @@ function Header({ colectionMenuItems, onItemClick, toggleLogin, isLoggedIn }) {
     left: 0,
     width: "100%",
     height: "60px",
-    backgroundColor: scroll ? "#050C13" : "transparent",
+    backgroundColor: scroll ? "rgb(5, 12, 19, 0.8)" : "transparent",
     transition: "background-color 0.3s ease",
   }
 

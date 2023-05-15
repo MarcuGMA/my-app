@@ -1,45 +1,41 @@
-import React from "react"
-import { AutentifButton } from "../components/buttons"
-import { AutentifInput } from "../components/autentification/forms"
-import { useState } from "react"
-import { Link } from "react-router-dom"
-// import {useState} from 'react';
-// import { Header } from '../components';
-// import { ButtonHeader } from '../components/buttons';
-// import { MySwiper } from '../components/Carousel';
-
-const autentificationData = [
-  {
-      "id": "101",
-      "name": "admin",
-      "password": "admin"
-  },
-  {
-      "id": "102",
-      "name": "user",
-      "password": "user"
-  }
-]
+import React from "react";
+import { AutentifButton } from "../components/buttons";
+import { AutentifInput } from "../components/autentification/forms";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import ErrorAlert from "../components/materialui/error";
+import SuccessAlert from "../components/materialui/succes";
+import autentificationData from "../api/autentification";
 
 function Login() {
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const [password, setPassword] = useState('')
-  const [username, setUsername] = useState('')
-  // const [error, setError] = useState('')
-
-  // const handlePasswordChange = (event) => {
-  //   setPassword(event.target.value)
-  // }
-
-  // const handleUsernameChange = (event) => {
-  //   setUsername(event.target.value)
-  //   console.log(username)
-  // }
-
-  const handleSubmit = (event) => {
-    console.log(username, password);
+  const handleReset = () => {
+    setSuccess(false);
+    setError(false);
   }
+  const handleSubmit = (event) => {
+    handleReset();
+    const user = autentificationData.find((user) => user.name === username);
+    if (user) {
+      if (user.password === password && user.name === username) {
+        setSuccess(true);
+      } else {
+        setError(true);
+      }
+    } else setError(true);
+  };
 
+  const handleShowAlert = (type, message) => {
+    if (type === "error") {
+      return <ErrorAlert message={message} />;
+    } else if (type === "success") {
+      return <SuccessAlert message={message} />;
+    }
+  }
 
   return (
     <div className="login">
@@ -47,25 +43,27 @@ function Login() {
         <Link to="/">
           <img src="/media/Logo/LOGO_GAMES.png" alt="" />
         </Link>
+        {success && <SuccessAlert message="Login successful" />}
+        {error && <ErrorAlert message="Invalid username or password" />}
       </div>
       <div className="loginWrapper">
         <div className="login-wrapper-form">
           <h1>Log in</h1>
           <form action="">
-            <AutentifInput type="text" placeholder="Email or username" 
+            <AutentifInput type="text" placeholder="Email or username"
               value={username}
-              onChange={(event) => setUsername(event.target.value)}    
+              onChange={(event) => setUsername(event.target.value)}
             />
-            <AutentifInput type="password" placeholder="Password" 
+            <AutentifInput type="password" placeholder="Password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
-          />
+            />
             <Link to="/register">
               {" "}
               <p>Register here if you dont have an account</p>{" "}
             </Link>
             <AutentifButton
-              text="Login" 
+              text="Login"
               onClick={handleSubmit}
             />
           </form>

@@ -1,0 +1,158 @@
+.gameListContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 180vh;
+    padding-top: 3rem ;
+
+    .gameList {
+        display: flex;
+        flex-direction: column;
+        width: 61%;
+        height: 100%;
+
+        .listGames {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            li {
+                color: $gray-text;
+                text-decoration: none;
+                list-style: none;
+                font-size: $size-2;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+
+            }
+            .selected {
+                color: $white-text;
+                transform: scale(1.1);
+                border-left: 3px solid $purple-components;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+            }
+        }
+    }
+    .gameListItems {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+       margin-top: 1.5rem;
+        
+        .gameListItem {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin :1rem;
+            cursor: pointer;
+            background-color: $background-elements;
+            transition: all 0.3s ease-in-out;
+            color: $white-text-70;
+            font-size: $size-2;
+
+            &:hover {
+                color: $white-text;
+            }
+
+            img {
+                width: 30%;
+                height: 100%;
+                border-radius: 5px;
+            }
+
+            .gameListItemInfo {
+                width: 70%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem 0 1rem;
+
+                .infoItemLeft {
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    
+                }
+
+                .itemInfoRight {
+                    width: 30%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .spanInfo {
+                        color: $gray-text;
+                        font-size: $size-0;
+                    }
+                }
+            }
+        }
+    }
+
+    .gameListAditional {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        height: auto;
+
+        h2 {
+            color: $white-text;
+            font-size: $size-3;
+            margin-bottom: 2rem;
+        }
+
+        .gameListAditionalItems {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            background-color: $background-elements;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+
+            .gameListAditionalItem {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding : 0.5rem 0.3rem 0.5rem 0.3rem;
+                border-bottom: 1px solid $gray-text;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                color: $white-text-70;
+                font-size: $size-2;
+
+                &:hover {
+                    color: $white-text;
+                }
+
+                img {
+                    width: 40%;
+                    height: 100%;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

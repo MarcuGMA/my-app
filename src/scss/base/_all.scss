@@ -9,6 +9,15 @@
 .wrapper {
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapperBreak {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 10vh;
+    border-bottom: 1px solid #545B63;
 }
 
 body {

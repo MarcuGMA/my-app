@@ -6,6 +6,8 @@ import "swiper/scss/pagination";
 import "swiper/scss/scrollbar";
 import { ButtonHeader } from "../components/buttons";
 
+import { Autoplay, Pagination, Navigation } from 'swiper';
+
 export const MySwiper = () => {
   return (
     <Swiper

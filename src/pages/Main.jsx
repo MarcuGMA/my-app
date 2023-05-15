@@ -1,7 +1,10 @@
-import React, { useState } from "react"
-import { Header } from "../components"
-import { ButtonHeader } from "../components/buttons"
-import { MySwiper } from "../components/Carousel"
+import React, { useState } from "react";
+import { Header } from "../components";
+import { ButtonHeader } from "../components/buttons";
+import { MySwiper } from "../components/Carousel";
+import Wrapper from "../components/helpers/wrapper";
+import GameList from "../components/main/gamelist";
+import Streams from "../components/main/streams/streams";
 
 const colectionMenuItems123 = [
   "POPULAR GAMES",
@@ -9,20 +12,20 @@ const colectionMenuItems123 = [
   "NEW RELEASE",
   "FREE TO PLAY",
   "COLLECTION",
-]
+];
 
 function Main() {
-  const [isLoggedIn, setLoggedIn] = useState(false)
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
-  const toggleLogin = () => setLoggedIn(!isLoggedIn)
+  const toggleLogin = () => setLoggedIn(!isLoggedIn);
 
-  const onItemClick = () => console.log(`it's a click!!!`)
+  const onItemClick = () => console.log(`it's a click!!!`);
 
   const styles = {
     background: `linear-gradient(180deg, rgba(16,25,36,1) 5%, rgba(16,25,36,0.4) 50%, rgba(16,25,36,1) 85%), url(https://images2.alphacoders.com/976/976068.jpg) no-repeat center center `,
     ObjectFit: "cover",
     backgroundSize: "cover",
-  }
+  };
 
   return (
     <div className="home-page">
@@ -33,7 +36,7 @@ function Main() {
         isLoggedIn={isLoggedIn}
         colectionMenuItems={colectionMenuItems123}
       />
-      <div className="topElements " style={styles}>
+      <div className="topElements" style={styles}>
         <img src="/public/media/images/gow.jpg" alt="" />
         <div className="wrapper">
           <div className="topGame">
@@ -44,9 +47,11 @@ function Main() {
         </div>
         <MySwiper />
       </div>
-      <div className="anth-el" />
+      <Wrapper />
+      <GameList />
+      <Streams />
     </div>
-  )
+  );
 }
 
-export default Main
+export default Main;
