@@ -1,0 +1,85 @@
+.mostPlayed {
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+    justify-content: space-around;
+  padding-top: 10px;
+
+    h1 {
+        font-size: $size-5;
+        font-weight: 700;
+        color: $white-text;
+        margin-bottom: 2rem;
+      }
+
+  .mostPlayed__list {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .mostPlayed__item {
+      width: 25%;
+      height: 25%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin: 10px;
+      background-color: $background-elements;
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 80%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+      }
+
+      p {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $white-text;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        background-color: $background-elements-head;
+      }
+    }
+  }
+
+  .mostPlayedButton {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+    background-color: $purple-input;
+    border: 1px solid $purple-components;
+    color: $white-text;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $purple-components;
+      transition: all 0.3s ease-in-out;
+    }
+
+  }
+}

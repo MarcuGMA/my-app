@@ -1,0 +1,135 @@
+.streamsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: $background-color-dark;
+
+  h1 {
+    font-size: $size-5;
+    font-weight: 700;
+    color: $white-text;
+    margin-bottom: 2rem;
+  }
+
+  .streamBox {
+    width: 100%;
+    max-width: 1200px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+
+    .boxStream {
+      width: 100%;
+      max-width: 1200px;
+      height: 90%;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .streamRow {
+      width: 35%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .itemGame {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        background-color: $background-elements;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $background-elements-head;
+        }
+
+        img {
+          width: 90%;
+          height: 50%;
+          object-fit: cover;
+          border-radius: 1rem;
+        }
+
+        .gameName {
+          width: 90%;
+          height: 40%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $white-text;
+        }
+      }
+    }
+
+    .streamTwich {
+      width: 65%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      grid-template-rows: repeat(2, 1fr); /* Two rows */
+      gap: 10px; /* Adds spacing between elements */
+      justify-items: center; /* Centers items horizontally */
+      align-items: center; /* Centers items vertically */
+
+      .streamTwichItem {
+        width: 60%;
+        height: 60%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+        margin: 20px;
+        background-color: $background-elements;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: $background-elements-head;
+        }
+
+        img {
+          width: 90%;
+          height: 50%;
+          object-fit: cover;
+          border-radius: 1rem;
+        }
+
+        .gameName {
+          width: 90%;
+          height: 40%;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: space-around;
+          font-size: $size-1;
+          font-weight: 700;
+          color: $white-text;
+
+          p {
+            font-weight: 400;
+            color: $white-text-70;
+          }
+        }
+      }
+    }
+  }
+}

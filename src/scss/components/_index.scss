@@ -1,5 +1,9 @@
 @import "header";
 @import "buttons";
 @import "carousel";
-@import "gameList";
-@import "streams";
+@import "./main/gameList";
+@import "./main/streams";
+@import "footer";
+@import "./main/newsMain";
+@import "./main/mostPlayed";
+@import "./main/trendGame";

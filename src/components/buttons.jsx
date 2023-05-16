@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export function AutentifButton({ text, ...props }) {
   return <button type="button" className="autentificationButton" {...props}>{text}</button>

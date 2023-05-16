@@ -359,6 +359,16 @@ const gamesData = [
     image: "https://cdn.cloudflare.steamstatic.com/steam/apps/200210/capsule_616x353.jpg?t=1620938400",
     type : "FREE TO PLAY",
   },
+  {
+    id: 69,
+    name: "The Binding of Isaac: Rebirth",
+    steam: true,
+    windows: true,
+    price: 14.99,
+    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/250900/capsule_616x353.jpg?t=1620938400",
+    type : "TOP DEALS",
+  },
+
 ]
 
 export default gamesData;

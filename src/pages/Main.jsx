@@ -4,7 +4,11 @@ import { ButtonHeader } from "../components/buttons";
 import { MySwiper } from "../components/Carousel";
 import Wrapper from "../components/helpers/wrapper";
 import GameList from "../components/main/gamelist";
-import Streams from "../components/main/streams/streams";
+import Streams from "../components/main/streams";
+import Footer from "../components/footer";
+import NewsMain from "../components/main/newsMain";
+import MostPlayed from "../components/main/mostPlayed";
+import TrendGame from "../components/main/trendGame";
 
 const colectionMenuItems123 = [
   "POPULAR GAMES",
@@ -50,6 +54,13 @@ function Main() {
       <Wrapper />
       <GameList />
       <Streams />
+      <Wrapper />
+      <NewsMain />
+      <Wrapper />
+      <MostPlayed />
+      <Wrapper />
+      <TrendGame />
+      <Footer />
     </div>
   );
 }

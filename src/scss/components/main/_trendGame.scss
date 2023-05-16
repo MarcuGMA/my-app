@@ -1,0 +1,202 @@
+.trendGame {
+    width: 100%;
+    height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+
+    h1 {
+        font-size: $size-5;
+        font-weight: 700;
+        color: $white-text;
+        margin-bottom: 2rem;
+      }
+
+      .trendGameContainer {
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        
+        .gameContainer {
+            width: 50%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            background-color: $background-elements;
+            margin: 10px;
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                height: 80%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .gameInfo {
+                display: flex;
+                flex-direction:  row;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                height: 20%;
+
+                .curentPlayers{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    height: 100%;
+                    cursor: pointer;
+        
+                    p {
+                        font-size: $size-4;
+                        font-weight: 600;
+                        color: $green-highlight;
+                    }
+
+                    span {
+                        font-size: $size-1;
+                        font-weight: 400;
+                        color: $white-text-70;
+                    }
+
+                }
+                
+                
+            }
+            
+            &:hover {
+               background-color: $background-elements-head;
+               transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .listContainer {
+            width: 50%;
+            height:70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $background-elements;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+
+            .trendListGames {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                align-items: start;
+                justify-content: space-around;
+                flex-direction: column;
+
+                h3 {
+                    color: $green-highlight;
+                    font-size: $size-1;
+                    padding: 5px;
+                }
+
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        width: 100%;
+                        color: $white-text;
+                        font-size: $size-0;
+                        padding: 5px;
+                    }
+                }
+            }
+
+             .trendCurrentPlayers {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                h3 {
+                    color: $green-highlight;
+                    font-size: $size-1;
+                    padding: 5px;
+                }
+
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        width: 100%;
+                        color: $white-text;
+                        font-size: $size-0;
+                        padding: 5px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .trendPeak {
+                width: 30%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                h3 {
+                    color: $green-highlight;
+                    font-size: $size-1;
+                    padding: 5px;
+                }
+
+                ul {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        width: 100%;
+                        color: $white-text;
+                        font-size: $size-0;
+                        padding: 5px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+      }
+}
