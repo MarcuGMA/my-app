@@ -10,11 +10,11 @@ import autentificationData from "../api/autentification";
 import { v4 as uuid } from "uuid";
 
 function Login() {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // const toggleLogin = () => {
-  //   setIsLoggedIn((prevState) => !prevState);
-  // };
+  const toggleLogin = () => {
+    setIsLoggedIn((prevState) => !prevState);
+  };
 
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");

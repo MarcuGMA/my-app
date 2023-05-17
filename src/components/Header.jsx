@@ -172,7 +172,7 @@ function Header({ colectionMenuItems, onItemClick, isLoggedIn, toggleLogin }) {
           </div>
         </div>
         <div className="loginHeader">
-          {/* {isLoggedIn ? (
+          {isLoggedIn ? (
             <button className="logoutButton" onClick={toggleLogin}>
               Logout
             </button>
@@ -180,7 +180,7 @@ function Header({ colectionMenuItems, onItemClick, isLoggedIn, toggleLogin }) {
             <Link className="loginHeaderLink" to="/login">
               <p>Login / Register</p>
             </Link>
-          )} */}
+          )}
         </div>
       </div>
     </header>
