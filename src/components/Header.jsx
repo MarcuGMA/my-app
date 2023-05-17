@@ -171,9 +171,14 @@ function Header({ colectionMenuItems, onItemClick, toggleLogin, isLoggedIn }) {
             </div>
           </div>
         </div>
-        <div className="loginHeader">
+        <div className="loginHeader" 
+        onClick={() => {
+          if (user) {
+            dispatch(logout())
+          }
+        }}
+        >
           <Link className="loginHeaderLink" to="/login">
-            {" "}
             <p>Login / Register </p>
           </Link>
         </div>

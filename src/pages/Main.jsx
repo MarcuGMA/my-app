@@ -1,24 +1,20 @@
-import React, { useState } from "react";
+import React, { useState , useNavigate} from "react";
 import { Header } from "../components";
 import { ButtonHeader } from "../components/buttons";
 import { MySwiper } from "../components/Carousel";
 import Wrapper from "../components/helpers/wrapper";
 import GameList from "../components/main/gamelist";
-import Streams from "../components/main/streams";
+import Streams from "../components/main/streams/streams";
 import Footer from "../components/footer";
 import NewsMain from "../components/main/newsMain";
 import MostPlayed from "../components/main/mostPlayed";
 import TrendGame from "../components/main/trendGame";
+import { Link } from "react-router-dom";
+import colectionMenuItems123 from "../api/headerMenu";
 
-const colectionMenuItems123 = [
-  "POPULAR GAMES",
-  "TOP DEALS",
-  "NEW RELEASE",
-  "FREE TO PLAY",
-  "COLLECTION",
-];
 
 function Main() {
+
   const [isLoggedIn, setLoggedIn] = useState(false);
 
   const toggleLogin = () => setLoggedIn(!isLoggedIn);
@@ -46,7 +42,9 @@ function Main() {
           <div className="topGame">
             <h1>God of War</h1>
             <p>Free</p>
-            <ButtonHeader />
+            <Link to="/gamePage">
+              <ButtonHeader />
+            </Link>
           </div>
         </div>
         <MySwiper />

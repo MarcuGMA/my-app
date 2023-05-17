@@ -9,6 +9,12 @@ import { ButtonHeader } from "../components/buttons";
 import { Autoplay, Pagination, Navigation } from 'swiper';
 
 export const MySwiper = () => {
+
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
+
   return (
     <Swiper
       className="mySwiper"
@@ -18,12 +24,13 @@ export const MySwiper = () => {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      navigation={{
-        prevEl: ".swiper-button-prev",
-        nextEl: ".swiper-button-next",
-      }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      modules={[Autoplay, Pagination, Navigation]}
+      // navigation={{
+      //   prevEl: ".swiper-button-prev",
+      //   nextEl: ".swiper-button-next",
+      // }}
+      // onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log("slide change")}
     >
       {SwiperElementsData.map((item) =>
         item.swiper ? (

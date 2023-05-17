@@ -6,19 +6,17 @@ function MostPlayed() {
   mostPlayed.length = 9;
   return (
     <div className="mostPlayed wrapper">
-        <h1>MOST PLAYED</h1>
-        <div className="mostPlayed__list">
-          {mostPlayed.map((game) => (
-            <div className="mostPlayed__item" key={game.id}>
-                <img src={game.image} alt="" />
-                <h3>{game.title}</h3>
-                <p>${game.price}</p>
-            </div>
-          ))}
-        </div>
-        <button className="mostPlayedButton">
-            VIEW ALL
-        </button>
+      <h1>MOST PLAYED</h1>
+      <div className="mostPlayed__list">
+        {mostPlayed.map((game) => (
+          <div className="mostPlayed__item" key={game.id}>
+            <img src={game.image} alt="" />
+            <h3>{game.title}</h3>
+            <p>${game.price}</p>
+          </div>
+        ))}
+      </div>
+      <button className="mostPlayedButton">VIEW ALL GAMES</button>;
     </div>
   );
 }

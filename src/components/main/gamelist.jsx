@@ -41,7 +41,7 @@ function GameList () {
             </div>
           </div>
           <div className="itemInfoRight">
-            <p>${game.price}</p>
+            <p>{game.price}</p>
             <span className="spanInfo">from</span>  
           </div>
          </div>

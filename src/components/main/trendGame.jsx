@@ -2,8 +2,9 @@ import React from "react";
 import gameData from "../../api/gameData";
 
 function TrendGame() {
-  const gameTitles = gameData;
+  const gameTitles = gameData.filter((game) => game.name);
   gameTitles.length = 12;
+ 
   const randomNumbers = Array.from(
     { length: 12 },
     () => Math.floor(Math.random() * (500000 - 100000 + 1)) + 100000
