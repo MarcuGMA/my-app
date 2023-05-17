@@ -4,7 +4,7 @@ import gameData from "../../api/gameData";
 function TrendGame() {
   const gameTitles = gameData.filter((game) => game.name);
   gameTitles.length = 12;
- 
+
   const randomNumbers = Array.from(
     { length: 12 },
     () => Math.floor(Math.random() * (500000 - 100000 + 1)) + 100000
@@ -43,15 +43,15 @@ function TrendGame() {
             <h3>CURRENT PLAYERS</h3>
             <ul>
               {randomNumbers.map((number) => (
-                <li >{number}</li>
+                <li>{number}</li>
               ))}
             </ul>
           </div>
           <div className="trendPeak">
-          <h3>TREND PEAK</h3>
+            <h3>TREND PEAK</h3>
             <ul>
               {randomNumbers.map((number) => (
-                <li >{number}</li>
+                <li>{number}</li>
               ))}
             </ul>
           </div>

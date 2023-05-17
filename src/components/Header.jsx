@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
-function Header({ colectionMenuItems, onItemClick, toggleLogin, isLoggedIn }) {
-  const [scroll, setScroll] = useState(false)
+function Header({ colectionMenuItems, onItemClick, isLoggedIn, toggleLogin }) {
+  const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset
+      const scrollTop = window.pageYOffset;
       if (scrollTop > 0) {
-        setScroll(true)
+        setScroll(true);
       } else {
-        setScroll(false)
+        setScroll(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const headerStyle = {
     position: "fixed",
@@ -30,7 +30,7 @@ function Header({ colectionMenuItems, onItemClick, toggleLogin, isLoggedIn }) {
     height: "60px",
     backgroundColor: scroll ? "rgb(5, 12, 19, 0.8)" : "transparent",
     transition: "background-color 0.3s ease",
-  }
+  };
 
   return (
     <header style={headerStyle}>
@@ -171,20 +171,20 @@ function Header({ colectionMenuItems, onItemClick, toggleLogin, isLoggedIn }) {
             </div>
           </div>
         </div>
-        <div className="loginHeader" 
-        onClick={() => {
-          if (user) {
-            dispatch(logout())
-          }
-        }}
-        >
-          <Link className="loginHeaderLink" to="/login">
-            <p>Login / Register </p>
-          </Link>
+        <div className="loginHeader">
+          {/* {isLoggedIn ? (
+            <button className="logoutButton" onClick={toggleLogin}>
+              Logout
+            </button>
+          ) : (
+            <Link className="loginHeaderLink" to="/login">
+              <p>Login / Register</p>
+            </Link>
+          )} */}
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

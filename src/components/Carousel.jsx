@@ -6,12 +6,11 @@ import "swiper/scss/pagination";
 import "swiper/scss/scrollbar";
 import { ButtonHeader } from "../components/buttons";
 
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay, Pagination, Navigation } from "swiper";
 
 export const MySwiper = () => {
-
   const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty('--progress', 1 - progress);
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
 

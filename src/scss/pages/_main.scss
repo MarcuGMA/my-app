@@ -1,40 +1,40 @@
 .topElements {
-    width: 100%;
-    height: 130vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+  width: 100%;
+  height: 130vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .topGame {
-    width: 100%;
-    height: 20vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    flex-direction: column;
-    color: $white-text;
-    font-size: 1.3rem;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  color: $white-text;
+  font-size: 1.3rem;
 
-    p {
-        color:$white-text-70;
-        font-size: 2rem;
-    }
+  p {
+    color: $white-text-70;
+    font-size: 2rem;
+  }
 }
 
 .anth-el {
-    width: 100%;
-    height: 20vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    color: $white-text;
-    font-size: 1.3rem;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: $white-text;
+  font-size: 1.3rem;
 
-    p {
-        color:$white-text-70;
-        font-size: 2rem;
-    }
+  p {
+    color: $white-text-70;
+    font-size: 2rem;
+  }
 }

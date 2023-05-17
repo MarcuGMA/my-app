@@ -54,9 +54,7 @@ function GamePageInfo() {
             soarta orașului New York din universul Marvel atârnă pe umerii lui.
           </p>
         </div>
-        <button className="notifyButton">
-                NOTIFY ME
-        </button>
+        <button className="notifyButton">NOTIFY ME</button>
       </div>
     </div>
   );

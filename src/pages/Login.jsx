@@ -6,9 +6,16 @@ import { Link, useNavigate } from "react-router-dom";
 import ErrorAlert from "../components/materialui/error";
 import SuccessAlert from "../components/materialui/succes";
 import autentificationData from "../api/autentification";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
+import { v4 as uuid } from "uuid";
 
 function Login() {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // const toggleLogin = () => {
+  //   setIsLoggedIn((prevState) => !prevState);
+  // };
+
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [error, setError] = useState(false);
@@ -21,15 +28,19 @@ function Login() {
   };
 
   const handleSubmit = (event) => {
-  
     event.preventDefault();
+
     handleReset();
+
+    const checkTokenInLocalStorage = () => {
+      return localStorage.getItem("token") !== null;
+    };
+
     const user = autentificationData.find((user) => user.name === username);
     if (user) {
       if (user.password === password && user.name === username) {
         setSuccess(true);
-        const secretKey = "your_secret_key";
-        const token = jwt.sign({ username }, secretKey);
+        const token = uuid();
         localStorage.setItem("token", token);
         navigate("/");
       } else {
@@ -78,9 +89,7 @@ function Login() {
                 <p>Register here if you don't have an account</p>
               </Link>
             )}
-            {!success && (
-              <AutentifButton text="Login" onClick={handleSubmit} />
-            )}
+            {!success && <AutentifButton text="Login" onClick={handleSubmit} />}
           </form>
         </div>
         <div className="login-wrapper-icons">

@@ -1,261 +1,261 @@
 header {
+  @include displayRow;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+  backdrop-filter: blur(0.8rem);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  .containerHeader {
     @include displayRow;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 0;
-    backdrop-filter: blur(.8rem);
-    position: fixed;
     width: 100%;
-    z-index: 2;
-    
-    .containerHeader {
-        @include displayRow;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
+    justify-content: space-between;
+    align-items: center;
 
-        .logo {
-            padding: 0 1rem;
-            cursor: pointer;
+    .logo {
+      padding: 0 1rem;
+      cursor: pointer;
+    }
+
+    .searchBarHeader {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      border-radius: 1rem;
+      background-color: $gray-text;
+
+      &_icon {
+        width: 15px;
+        height: 15px;
+        margin-right: 15px;
+        background-color: $gray-text;
+      }
+
+      &_input {
+        height: 2rem;
+        width: calc(100% - 20px);
+        border: none;
+        outline: none;
+        color: $white-text-70;
+        background-color: transparent;
+      }
+    }
+
+    .categoriesHeader {
+      color: $white-text;
+      text-decoration: none;
+      font-size: $size-0;
+      font-weight: $font-weight-2;
+      cursor: pointer;
+      width: 15%;
+      height: 2rem;
+      text-align: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem 0.5rem 0 0;
+
+      p {
+        z-index: 1;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2rem;
+        background-color: $white-text;
+        border-radius: 0.5rem 0.5rem 0 0;
+        display: none;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      &:hover {
+        background-color: $background-elements-head;
+
+        &:after {
+          display: block;
+          background-color: $background-elements-head;
+          height: 1.5rem;
         }
+      }
 
-        .searchBarHeader {
-            width: 40%;
+      .colectionList {
+        left: 0;
+        position: absolute;
+        height: 350px;
+        right: 0;
+        margin: auto;
+        top: calc(100%);
+        background-color: $background-elements-head;
+        display: none;
+        // display: flex;
+        // align-items: flex-start;
+        z-index: 2;
+        border-radius: 0 0 0.5rem 0.5rem;
+        padding: 1rem 1rem 2rem 1rem;
+
+        .colectionMenu {
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          .colectionMenuList {
             display: flex;
-            align-items: center;
-            padding: 0 1rem;
-            border-radius: 1rem;
-            background-color: $gray-text;
+            width: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 80%;
+            align-items: flex-start;
 
-            &_icon {
-                width: 15px;
-                height: 15px;
-                margin-right: 15px;
-                background-color: $gray-text;
-            }
+            ul {
+              list-style: none;
+              height: 75%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              align-items: flex-start;
 
-            &_input {
-                height: 2rem;
-                width: calc(100% - 20px);
-                border: none;
-                outline: none;
+              li {
+                cursor: pointer;
+                color: $white-text;
+                font-size: $size-1;
+                font-weight: $font-weight-3;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
                 color: $white-text-70;
-                background-color: transparent;
-            }
-        }
 
-        .categoriesHeader {
-            color: $white-text;
-            text-decoration: none;
-            font-size: $size-0;
-            font-weight: $font-weight-2;
-            cursor: pointer;
-            width: 15%;
-            height: 2rem;
-            text-align: center;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem 0.5rem 0 0;
+                &:hover {
+                  color: $green-highlight;
+                }
+              }
+            }
 
             p {
-                z-index: 1;
-            }
-
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 2rem;
-                background-color: $white-text;
-                border-radius: 0.5rem 0.5rem 0 0;
-                display: none;
-                max-width: 1200px;
-                margin: auto;
-            }
-
-            &:hover {
-                background-color: $background-elements-head;
-
-                &:after {
-                    display: block;
-                    background-color: $background-elements-head;
-                    height: 1.5rem;
-                }
-            }
-
-            .colectionList {
-                left: 0;
-                position: absolute;
-                height: 350px;
-                right: 0;
-                margin: auto;
-                top: calc(100%);
-                background-color: $background-elements-head;
-                display: none;
-                // display: flex;
-                // align-items: flex-start;
-                z-index: 2;
-                border-radius: 0 0 0.5rem 0.5rem;
-                padding: 1rem 1rem 2rem 1rem;
-
-                .colectionMenu {
-                    width: 25%;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    align-items: flex-start;
-
-                    .colectionMenuList {
-                        display: flex;
-                        width: 100%;
-                        justify-content: space-between;
-                        flex-direction: column;
-                        height: 80%;
-                        align-items: flex-start;
-
-                        ul {
-                            list-style: none;
-                            height: 75%;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            align-items: flex-start;
-
-                            li {
-                                cursor: pointer;
-                                color: $white-text;
-                                font-size: $size-1;
-                                font-weight: $font-weight-3;
-                                text-decoration: none;
-                                transition: all 0.3s ease-in-out;
-                                color: $white-text-70;
-
-                                &:hover {
-                                    color: $green-highlight;
-                                }
-                            }
-                        }
-
-                        p {
-                            a {
-                                color: $white-text;
-                                text-decoration: none;
-                                font-size: $size-1;
-                                transition: all 0.3s ease-in-out;
-                                color: $white-text-70;
-                                font-weight: $font-weight-3;
-
-                                &:hover {
-                                    color: $green-highlight;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .colectionSuggestion {
-                    width: 75%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-
-                    .colectionSuggestionElements {
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        flex-direction: row;
-                        padding: 1rem 0 0 0;
-
-                        .SuggestionElement {
-                            width: 30%;
-                            height: 80%;
-
-                            .sugestionElementImage {
-                                width: 100%;
-                                height: 65%;
-
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                    border-radius: 1rem 1rem 0 0;
-                                    object-fit: cover;
-                                }
-                            }
-
-                            .sugestionElementText {
-                                width: 100%;
-                                height: 35%;
-                                background-color: $background-elements;
-                                border-radius: 0 0 1rem 1rem;
-                                display: flex;
-                                justify-content: space-around;
-                                align-items: center;
-                                text-align: center;
-                                font-size: $size-0;
-                                font-weight: $font-weight-1;
-                                color: $white-text;
-                                transition: all 0.3s ease-in-out;
-
-                                svg {
-                                    width: 1.5rem;
-                                    height: 1.5rem;
-                                    fill: $gray-text;
-                                    transition: all 0.3s ease-in-out;
-                                }
-
-                                p {
-                                    width: 80%;
-                                    text-align: center;
-                                    font-size: $size-2;
-                                    font-weight: $font-weight-2;
-                                }
-
-                                .textFrom {
-                                    color: $gray-text;
-                                    transition: all 0.3s ease-in-out;
-                                }
-                            }
-
-                            &:hover {
-                                .sugestionElementText {
-                                    // background-color: $background-color;
-                                    background-color: $gray-text;
-                                    color: $white-text;
-
-                                    svg {
-                                        fill: $white-text;
-                                    }
-
-                                    .textFrom {
-                                        color: $white-text;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            &:hover .colectionList {
-                display: flex;
-            }
-        }
-        
-        .loginHeader {  
-            padding: 0 1rem;
-            cursor: pointer;
-
-            .loginHeaderLink {
+              a {
                 color: $white-text;
                 text-decoration: none;
-                font-size: $size-0;
-                font-weight: $font-weight-2;
-                width: 150px;
-                background-color: transparent;
-                border: none;
+                font-size: $size-1;
+                transition: all 0.3s ease-in-out;
+                color: $white-text-70;
+                font-weight: $font-weight-3;
+
+                &:hover {
+                  color: $green-highlight;
+                }
+              }
             }
+          }
         }
+
+        .colectionSuggestion {
+          width: 75%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .colectionSuggestionElements {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 1rem 0 0 0;
+
+            .SuggestionElement {
+              width: 30%;
+              height: 80%;
+
+              .sugestionElementImage {
+                width: 100%;
+                height: 65%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 1rem 1rem 0 0;
+                  object-fit: cover;
+                }
+              }
+
+              .sugestionElementText {
+                width: 100%;
+                height: 35%;
+                background-color: $background-elements;
+                border-radius: 0 0 1rem 1rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                font-size: $size-0;
+                font-weight: $font-weight-1;
+                color: $white-text;
+                transition: all 0.3s ease-in-out;
+
+                svg {
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  fill: $gray-text;
+                  transition: all 0.3s ease-in-out;
+                }
+
+                p {
+                  width: 80%;
+                  text-align: center;
+                  font-size: $size-2;
+                  font-weight: $font-weight-2;
+                }
+
+                .textFrom {
+                  color: $gray-text;
+                  transition: all 0.3s ease-in-out;
+                }
+              }
+
+              &:hover {
+                .sugestionElementText {
+                  // background-color: $background-color;
+                  background-color: $gray-text;
+                  color: $white-text;
+
+                  svg {
+                    fill: $white-text;
+                  }
+
+                  .textFrom {
+                    color: $white-text;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:hover .colectionList {
+        display: flex;
+      }
     }
+
+    .loginHeader {
+      padding: 0 1rem;
+      cursor: pointer;
+
+      .loginHeaderLink {
+        color: $white-text;
+        text-decoration: none;
+        font-size: $size-0;
+        font-weight: $font-weight-2;
+        width: 150px;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
 }
