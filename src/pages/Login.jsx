@@ -28,6 +28,9 @@ function Login() {
     if (user) {
       if (user.password === password && user.name === username) {
         setSuccess(true);
+        const secretKey = "your_secret_key";
+        const token = jwt.sign({ username }, secretKey);
+        localStorage.setItem("token", token);
         navigate("/");
       } else {
         setError(true);
