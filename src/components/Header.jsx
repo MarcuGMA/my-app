@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 
-function Header({ colectionMenuItems, onItemClick, isLoggedIn, toggleLogin }) {
+function Header({ colectionMenuItems, onItemClick }) {
   const [scroll, setScroll] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  //Scroll
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
@@ -21,6 +23,19 @@ function Header({ colectionMenuItems, onItemClick, isLoggedIn, toggleLogin }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  //Login verify token
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+  };
 
   const headerStyle = {
     position: "fixed",
@@ -173,7 +188,7 @@ function Header({ colectionMenuItems, onItemClick, isLoggedIn, toggleLogin }) {
         </div>
         <div className="loginHeader">
           {isLoggedIn ? (
-            <button className="logoutButton" onClick={toggleLogin}>
+            <button className="logoutButton" onClick={handleLogout}>
               Logout
             </button>
           ) : (
