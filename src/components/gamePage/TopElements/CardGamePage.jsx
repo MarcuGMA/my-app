@@ -2,13 +2,14 @@ import React from "react";
 import gamesData from "../../../api/gamesData";
 
 function CardGamePage() {
-  const game = gamesData[0];
+
 
   return (
     <div className="cardGamePage">
       <div className="cardGamePage__img">
+        {/* src={game.image} */}
         <img
-          src="https://psxbrasil.com.br/wp-content/uploads/2020/11/spider-8-4k.jpg"
+          src="https://images.alphacoders.com/113/thumb-1920-1130234.jpg"
           alt=""
         />
       </div>

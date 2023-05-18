@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-
+import SuccessAlert from "./materialui/succes";
 import { Link } from "react-router-dom";
 
 function Header({ colectionMenuItems, onItemClick }) {
   const [scroll, setScroll] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   //Scroll
   useEffect(() => {
@@ -29,6 +30,7 @@ function Header({ colectionMenuItems, onItemClick }) {
     const token = localStorage.getItem("token");
     if (token) {
       setIsLoggedIn(true);
+      // setSuccess(true);
     }
   }, []);
 
@@ -49,6 +51,7 @@ function Header({ colectionMenuItems, onItemClick }) {
 
   return (
     <header style={headerStyle}>
+      {success && <SuccessAlert message="Login successful" />}
       <div className="containerHeader wrapper">
         <div className="logo">
           <a href="index.html">
@@ -182,15 +185,22 @@ function Header({ colectionMenuItems, onItemClick }) {
                   </div>
                 </div>
               </div>
-              <button className="suggestionElements-button">SEE ALL</button>
+              <Link to="/categories">
+                <button className="suggestionElements-button">SEE ALL</button>
+              </Link>
             </div>
           </div>
         </div>
         <div className="loginHeader">
           {isLoggedIn ? (
-            <button className="logoutButton" onClick={handleLogout}>
-              Logout
-            </button>
+            <div className="logout">
+              {/* <Link className="loginHeaderLink" to="/login"> */}
+              <p>Profile</p>
+              {/* </Link> */}
+              <button className="logoutButton" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
           ) : (
             <Link className="loginHeaderLink" to="/login">
               <p>Login / Register</p>

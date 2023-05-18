@@ -6,6 +6,15 @@ import { useState, useEffect } from "react";
 function SuccessAlert({ message }) {
   const [visible, setVisible] = useState(true);
 
+  const styles = {
+    position: "absolute",
+    top: "100%",
+    left: "55%",
+    right: "0",
+    zIndex: "9999",
+  };
+
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(false);
@@ -15,7 +24,7 @@ function SuccessAlert({ message }) {
   }, []);
 
   return (
-    <Stack sx={{ width: "50%" }} spacing={2}>
+    <Stack sx={{ width: "40%"}}style={styles} spacing={2}>
       {visible && (
         <Alert variant="outlined" severity="success">
           {message}

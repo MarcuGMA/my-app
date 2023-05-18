@@ -14,6 +14,10 @@ export const MySwiper = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
 
+  const handleGameItemClick = (id) => {
+    localStorage.setItem("gameId", id);
+  };
+
   return (
     <Swiper
       className="mySwiper"
@@ -33,7 +37,7 @@ export const MySwiper = () => {
     >
       {SwiperElementsData.map((item) =>
         item.swiper ? (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item.id}  onClick={() => handleGameItemClick(item.id)}>
             <div className="swiperElement">
               <img src={item.image} alt="" />
               <div className="swiperElement-info">

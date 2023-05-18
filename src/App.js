@@ -5,8 +5,12 @@ import Main from "./pages/Main"
 import GamePage from "./pages/GamePage"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import CategoriesGames from "./pages/CategoriesGames"
+import gamesData from "./api/gameData"
 
 function App() {
+
+
   return (
     <BrowserRouter>
       <main>
@@ -14,7 +18,8 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/gamePage" element={<GamePage />} />
+          <Route path="/game/:id" element={<GamePage />} />
+          <Route path="/categories" element={<CategoriesGames />} />
         </Routes>
       </main>
     </BrowserRouter>

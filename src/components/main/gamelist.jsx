@@ -1,28 +1,26 @@
 import React from "react";
 import { useState } from "react";
 import gamesData from "../../api/gameData";
+// import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 function GameList() {
   const [selectedItem, setSelectedItem] = useState("TOP SELLERS");
 
+  const navigate = useNavigate();
+  
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
 
+  const handleGameItemClick = (id) => {
+    localStorage.setItem("gameId", id);
+    navigate(`/game/${id}`);
+
+  };
+
   const populateData = (type) => {
-    // switch (type) {
-    //   case "TOP SELLERS":
-    //     return gamesData.filter((game) => game.type === type);
-    //   case "TOP DEALS":
-    //     return gamesData.filter((game) => game.topDeal);
-    //   case "NEW RELEASES":
-    //     return gamesData.filter((game) => game.newRelease);
-    //   case "FREE TO PLAY":
-    //     return gamesData.filter((game) => game.freeToPlay);
-    //   default:
-    //     return [];
-    // }
     return gamesData.filter((game) => game.type === type);
   };
 
@@ -32,7 +30,9 @@ function GameList() {
       return (
         <div className="gameListItems">
           {data.data.map((game) => (
-            <div className="gameListItem">
+            <div className="gameListItem" key={game.id}
+            onClick={() => handleGameItemClick(game.id)}
+            >
               <img src={game.image} alt={game.name} />
               <div className="gameListItemInfo">
                 <div className="itemInfoLeft">
@@ -92,7 +92,7 @@ function GameList() {
           <h2>CHEAP GAMES</h2>
           <div className="gameListAditionalItems">
             {cheapGames.map((game) => (
-              <div className="gameListAditionalItem">
+              <div className="gameListAditionalItem" key={game.id} onClick={() => handleGameItemClick(game.id)}>
                 <img src={game.image} alt={game.name} />
                 <div className="gameListAditionalItemInfo">
                   <p>${game.price}</p>

@@ -246,6 +246,7 @@ header {
     .loginHeader {
       padding: 0 1rem;
       cursor: pointer;
+      width: 15%;
 
       .loginHeaderLink {
         color: $white-text;
@@ -255,6 +256,36 @@ header {
         width: 150px;
         background-color: transparent;
         border: none;
+      }
+
+      .logout {
+        color: $white-text;
+        text-decoration: none;
+        font-size: $size-0;
+        font-weight: $font-weight-2;
+        width: 150px;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+
+        .logoutButton {
+          color: $white-text;
+          text-decoration: none;
+          font-size: $size-0;
+          font-weight: $font-weight-2;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+
+          svg {
+            width: 10px;
+            height: 10px;
+            fill: $white-text;
+          }
+        }
       }
     }
   }

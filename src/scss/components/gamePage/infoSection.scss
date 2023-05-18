@@ -1,0 +1,56 @@
+.infoSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .aboutGames {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 5% 0;
+        justify-content: space-around;
+        color: $white-text;
+    }
+
+    .requirements {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            color: $white-text;
+            font-size: $size-5;
+            font-weight: $font-weight-2;
+            letter-spacing: 0.2rem;
+            padding: 5% 0;
+        }
+
+        .requirements__content {
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            color: $white-text;
+            padding: 5% 0;
+
+            ul {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                justify-content: space-around;
+            }
+        }
+    }
+
+
+
+}
