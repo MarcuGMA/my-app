@@ -21,22 +21,22 @@ function GamePage() {
 
   const [game, setGame] = useState(null);
 
-  useEffect(() => {
-    const gameId = localStorage.getItem("gameId");
-    if (gameId) {
-      const selectedGame = gamesData.find((game) => game.id === gameId);
-      if (selectedGame) {
-        setGame(selectedGame);
-      }
-    }
-  }, [localStorage.getItem("gameId")]);
+  // useEffect(() => {
+  //   const gameId = localStorage.getItem("gameId");
+  //   if (gameId) {
+  //     const selectedGame = gamesData.find((game) => game.id === gameId);
+  //     if (selectedGame) {
+  //       setGame(selectedGame);
+  //     }
+  //   }
+  // }, [localStorage.getItem("gameId")]);
 
 
   return (
     <div>
       <Header colectionMenuItems={colectionMenuItems123} />
       <TopElementsGamePage styles={styles} 
-      image={game ? game.image : null}
+      // image={game ? game.image : null}
       />
       <Wrapper />
       <GameStats />

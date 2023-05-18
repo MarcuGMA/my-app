@@ -12,24 +12,24 @@ function TopElementsGamePage() {
     backgroundSize: "cover",
   };
 
-  useEffect(() => {
-    const gameId = localStorage.getItem("gameId");
-    if (gameId) {
-      const selectedGame = gamesData.find((game) => game.id === gameId);
-      if (selectedGame) {
-        setGame(selectedGame);
-      }
-    }
-  }, [localStorage.getItem("gameId")]);
+  // useEffect(() => {
+  //   const gameId = localStorage.getItem("gameId");
+  //   if (gameId) {
+  //     const selectedGame = gamesData.find((game) => game.id === gameId);
+  //     if (selectedGame) {
+  //       setGame(selectedGame);
+  //     }
+  //   }
+  // }, [localStorage.getItem("gameId")]);
 
   return (
     <div className="topElementsGamePage" style={styles}>
       <div className="topElementsGamePageBox wrapper">
-        {game ? (
+        {/* {game ? (
           <CardGamePage image={game.image} />
-        ) : (
+        ) : ( */}
           <CardGamePage />
-        )} 
+        {/* )}  */}
         <GamePageInfo />
       </div>
     </div>

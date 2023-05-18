@@ -7,7 +7,7 @@ function CardGamePage() {
   return (
     <div className="cardGamePage">
       <div className="cardGamePage__img">
-        {/* src={game.image} */}
+        src={game.image}
         <img
           src="https://images.alphacoders.com/113/thumb-1920-1130234.jpg"
           alt=""
