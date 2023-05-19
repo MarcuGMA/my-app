@@ -137,14 +137,15 @@ header {
               }
             }
 
-            p {
-              a {
+            a {
+              text-decoration: none;
+              p {
                 color: $white-text;
-                text-decoration: none;
                 font-size: $size-1;
                 transition: all 0.3s ease-in-out;
                 color: $white-text-70;
                 font-weight: $font-weight-3;
+                text-decoration: none;
 
                 &:hover {
                   color: $green-highlight;

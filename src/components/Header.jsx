@@ -86,9 +86,16 @@ function Header({ colectionMenuItems, onItemClick }) {
                     </li>
                   ))}
                 </ul>
-                <p>
-                  <a href="about-us.html">ABOUT US</a>
-                </p>
+                <Link to="/collections">
+                  <p>
+                    COLLECTIONS
+                  </p>
+                </Link>
+                <Link to="/about-us">
+                  <p>
+                    ABOUT US
+                  </p>
+                </Link>
               </div>
             </div>
             <div className="colectionSuggestion">

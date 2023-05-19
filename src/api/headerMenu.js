@@ -5,7 +5,7 @@ const colectionMenuItems123 = [
     "TOP DEALS",
     "NEW RELEASE",
     "FREE TO PLAY",
-    "COLLECTION",
+    "UNDER 10$",
   ];
   
 export default colectionMenuItems123;

@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import Header from "../components/Header";
+import colectionMenuItems123 from "../api/headerMenu";
+import Divider from "../components/helpers/dividing";
+import LeftCategories from "../components/CategoriesGames/leftCategories/leftCategories";
+import RightCategories from "../components/CategoriesGames/rightCategories/rightCategories";
+import Footer from "../components/footer";
 
 function CategoriesGames() {
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <div>
-      <h1>CategoriesGames</h1>
-    </div>
+    <>
+      <div className="wrapper">
+        <Header colectionMenuItems={colectionMenuItems123} />
+        <Divider />
+        <div className="categoriesGamesContainer">
+          <LeftCategories
+            selectedCategory={selectedCategory}
+            handleCategorySelect={handleCategorySelect}
+          />
+          <RightCategories selectedCategory={selectedCategory} />
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 }
 

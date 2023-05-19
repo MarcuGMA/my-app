@@ -10,7 +10,7 @@ import GameQuestions from "../components/gamePage/GameQuestions/GameQuestions";
 import InfoSection from "../components/gamePage/infoSection/infoSection";
 import CommentSection from "../components/gamePage/CommentsSection/CommentSection";
 import gamesData from "../api/gameData";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 function GamePage() {
   const styles = {
@@ -19,7 +19,7 @@ function GamePage() {
     backgroundSize: "cover",
   };
 
-  const [game, setGame] = useState(null);
+  // const [game, setGame] = useState(null);
 
   // useEffect(() => {
   //   const gameId = localStorage.getItem("gameId");
@@ -31,12 +31,12 @@ function GamePage() {
   //   }
   // }, [localStorage.getItem("gameId")]);
 
-
   return (
     <div>
       <Header colectionMenuItems={colectionMenuItems123} />
-      <TopElementsGamePage styles={styles} 
-      // image={game ? game.image : null}
+      <TopElementsGamePage
+        styles={styles}
+        // image={game ? game.image : null}
       />
       <Wrapper />
       <GameStats />

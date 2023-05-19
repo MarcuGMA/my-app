@@ -7,6 +7,8 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import CategoriesGames from "./pages/CategoriesGames"
 import gamesData from "./api/gameData"
+import AboutUs from "./pages/AboutUs"
+import Collections from "./pages/Collections";
 
 function App() {
 
@@ -18,8 +20,10 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="/game/:id" element={<GamePage />} /> */}
+          <Route path="/gamePage" element={<GamePage />} />
           <Route path="/categories" element={<CategoriesGames />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/collections" element={<Collections />} />
         </Routes>
       </main>
     </BrowserRouter>
