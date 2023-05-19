@@ -5,15 +5,15 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function RightCategories() {
-  const [selectedItem, setSelectedItem] = useState("TOP SELLERS");
+  // const [selectedItem, setSelectedItem] = useState("TOP SELLERS");
 
-  const populateData = (type) => {
-    return gamesData.filter((game) => game.type === type);
-  };
+  // const populateData = (type) => {
+  //   return gamesData.filter((game) => game.type === type);
+  // };
 
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
-  };
+  // const handleItemClick = (item) => {
+  //   setSelectedItem(item);
+  // };
 
   const Category = (data) => {
     console.log(data);
