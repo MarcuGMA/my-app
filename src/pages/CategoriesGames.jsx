@@ -7,11 +7,11 @@ import RightCategories from "../components/CategoriesGames/rightCategories/right
 import Footer from "../components/footer";
 
 function CategoriesGames() {
-  // const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
-  // const handleCategorySelect = (category) => {
-  //   setSelectedCategory(category);
-  // };
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
 
   return (
     <>
@@ -20,10 +20,12 @@ function CategoriesGames() {
         <Divider />
         <div className="categoriesGamesContainer">
           <LeftCategories
-            // selectedCategory={selectedCategory}
-            // handleCategorySelect={handleCategorySelect}
+            selectedCategory={selectedCategory}
+            handleCategorySelect={handleCategorySelect}
           />
-          <RightCategories selectedCategory={selectedCategory} />
+          <RightCategories 
+            selectedCategory={selectedCategory}
+          />
         </div>
       </div>
       <Footer />

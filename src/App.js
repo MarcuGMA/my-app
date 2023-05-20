@@ -11,8 +11,6 @@ import AboutUs from "./pages/AboutUs"
 import Collections from "./pages/Collections";
 
 function App() {
-
-
   return (
     <BrowserRouter>
       <main>
@@ -21,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/gamePage" element={<GamePage />} />
+          <Route path="/gamePage/:id" element={<GamePage />} />
           <Route path="/categories" element={<CategoriesGames />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/collections" element={<Collections />} />

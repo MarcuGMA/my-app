@@ -1,21 +1,14 @@
 import React from "react";
 import MenuCategories from "./menuCategories";
 import LeftEl from "./leftEl";
-import { useState } from "react";
 
-function LeftCategories() {
-  // const [selectedCategory, setSelectedCategory] = useState("");
-
-  // const handleCategorySelect = (category) => {
-  //   setSelectedCategory(category);
-  // };
-
+function LeftCategories({ selectedCategory,  handleCategorySelect }) {
   return (
     <div className="leftCategories">
       <h1>CATEGORIES</h1>
       <MenuCategories
-        // selectedCategory={selectedCategory}
-        // handleCategorySelect={handleCategorySelect}
+        selectedCategory={selectedCategory}
+        handleCategorySelect={handleCategorySelect}
       />
       <h1>RECOMENDED GAMES</h1>
       <LeftEl

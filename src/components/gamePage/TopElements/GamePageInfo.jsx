@@ -1,6 +1,6 @@
 import React from "react";
 
-function GamePageInfo() {
+function GamePageInfo({game}) {
   return (
     <div className="gamePageInfo">
       <div className="gameInfoImageCarousel">
@@ -31,7 +31,7 @@ function GamePageInfo() {
         </div>
       </div>
       <div className="gameInfoText">
-        <h1>Spider Man Remasted</h1>
+        <h1>{game.name}</h1>
         <div className="aditionalInfo">
           <div className="releaseDate">
             <h3>Release Date:</h3>

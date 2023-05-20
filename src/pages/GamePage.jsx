@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import { Header } from "../components";
 import Footer from "../components/footer";
 import colectionMenuItems123 from "../api/headerMenu";
@@ -10,34 +11,33 @@ import GameQuestions from "../components/gamePage/GameQuestions/GameQuestions";
 import InfoSection from "../components/gamePage/infoSection/infoSection";
 import CommentSection from "../components/gamePage/CommentsSection/CommentSection";
 import gamesData from "../api/gameData";
-// import { useEffect, useState } from "react";
 
 function GamePage() {
-  const styles = {
-    background: `linear-gradient(180deg, rgba(16,25,36,1) 5%, rgba(16,25,36,0.4) 50%, rgba(16,25,36,1) 85%), url(https://images2.alphacoders.com/976/976068.jpg) no-repeat center center `,
-    ObjectFit: "cover",
-    backgroundSize: "cover",
-  };
+  const { id } = useParams();
+  const gameId = Number(id);
 
-  // const [game, setGame] = useState(null);
+  const [game, setGame] = useState(null);
 
-  // useEffect(() => {
-  //   const gameId = localStorage.getItem("gameId");
-  //   if (gameId) {
-  //     const selectedGame = gamesData.find((game) => game.id === gameId);
-  //     if (selectedGame) {
-  //       setGame(selectedGame);
-  //     }
-  //   }
-  // }, [localStorage.getItem("gameId")]);
+  useEffect(() => {
+    if (!gameId) {
+      return ;
+    }
+
+    const selectedGame = gamesData.find((game) => game.id === gameId);
+
+    if (selectedGame) {
+      setGame(selectedGame);
+  }
+  }, [gameId]);
+
+ if(!game) {
+  return <h1>Please wait ....</h1>
+ }
 
   return (
     <div>
       <Header colectionMenuItems={colectionMenuItems123} />
-      <TopElementsGamePage
-        styles={styles}
-        // image={game ? game.image : null}
-      />
+      <TopElementsGamePage game={game} />
       <Wrapper />
       <GameStats />
       <GameNews />

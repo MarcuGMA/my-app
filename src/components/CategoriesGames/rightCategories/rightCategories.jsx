@@ -1,50 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import gamesData from "../../../api/gameData";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function RightCategories() {
-  // const [selectedItem, setSelectedItem] = useState("TOP SELLERS");
+function RightCategories({ selectedCategory }) {
 
-  // const populateData = (type) => {
-  //   return gamesData.filter((game) => game.type === type);
-  // };
+  const [dataToShow, setDataToShow] = useState(gamesData);
 
-  // const handleItemClick = (item) => {
-  //   setSelectedItem(item);
-  // };
+  useEffect(() => {
+    if(!selectedCategory || selectedCategory === 'ALL') {
+      return setDataToShow(gamesData);
+    }
 
-  const Category = (data) => {
-    console.log(data);
-    if (data) {
-      return (
-        <div className="gameListItems">
-          {data.data.map((game) => (
-            <div
-              className="gameListItem"
-              key={game.id}
-              onClick={() => handleGameItemClick(game.id)}
-            >
-              <img src={game.image} alt={game.name} />
-              <div className="gameListItemInfo">
-                <div className="itemInfoLeft">
-                  <h3>{game.name}</h3>
-                  <div className="iconsInfo">
-                    <FontAwesomeIcon icon="star" />
-                  </div>
-                </div>
-                <div className="itemInfoRight">
-                  <p>{game.price}</p>
-                  <span className="spanInfo">from</span>
+    setDataToShow(
+      gamesData.filter(({ type }) => type === selectedCategory),
+    )
+  } , [selectedCategory]);
+
+ 
+
+
+  const renderCategory = (data) => {
+    if(!data) {
+      return <h1>No Games data!!!</h1> 
+    }
+
+    return (
+      <div className="gameListItems">
+        {data.map((game) => (
+          <div
+            className="gameListItem"
+            key={game.id}
+            onClick={() => handleGameItemClick(game.id)}
+          >
+            <img src={game.image} alt={game.name} />
+            <div className="gameListItemInfo">
+              <div className="itemInfoLeft">
+                <h3>{game.name}</h3>
+                <div className="iconsInfo">
+                  <FontAwesomeIcon icon="star" />
                 </div>
               </div>
+              <div className="itemInfoRight">
+                <p>{game.price}</p>
+                <span className="spanInfo">from</span>
+              </div>
             </div>
-          ))}
-        </div>
-      );
-    }
-    return console.log(populateData(selectedItem));
+          </div>
+        ))}
+      </div>
+    );
   };
 
   return (
@@ -57,7 +62,7 @@ function RightCategories() {
         </div>
       </div>
       <div className="categoriesElements">
-        <Category data={populateData(selectedItem)} />
+        {renderCategory(dataToShow)}
       </div>
     </div>
   );

@@ -14,11 +14,9 @@ function GameList() {
     setSelectedItem(item);
   };
 
-  // const handleGameItemClick = (id) => {
-  //   localStorage.setItem("gameId", id);
-  //   navigate(`/game/${id}`);
-
-  // };
+  const handleGameItemClick = (id) => {
+    navigate(`/gamePage/${id}`);
+  };
 
   const populateData = (type) => {
     return gamesData.filter((game) => game.type === type);
