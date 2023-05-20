@@ -8,10 +8,10 @@ export function AutentifButton({ text, ...props }) {
   );
 }
 
-export function ButtonHeader() {
-  return <button className="gameElement-button">VIEW GAME</button>;
+export function ButtonHeader({onClick=()=>{}}) {
+  return <button type="button" className="gameElement-button" onClick={onClick}>VIEW GAME</button>;
 }
 
-export function ButtonGamesInfo(text, ...props) {
+export function ButtonGamesInfo({text, ...props}) {
   <button className="mostPlayedButton">{text}</button>;
 }
