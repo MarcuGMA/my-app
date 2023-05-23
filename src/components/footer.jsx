@@ -1,18 +1,21 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <div className="footerContainer">
       <div className="footerBox">
-        <p>© 2023 Games. All rights reserved.</p>
-        <p>Created by Marius Gora</p>
+        <p>© 2023 Games. {t("rights")}</p>
+        <p> {t("Created")}  Marius Gora</p>
         <div className="footerSecond">
           <ul>
-            <li>Giveaways</li>
-            <li>Reviews</li>
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-            <li>Cookie Policy</li>
+            <li>{t("Giveaways")}</li>
+            <li>{t("Reviews")}</li>
+            <li>{t("Privacy_Policy")}</li>
+            <li>{t("Terms_of_Service")}</li>
+            <li>{t( "Cookie_Policy")}</li>
           </ul>
         </div>
       </div>

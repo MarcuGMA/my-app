@@ -1,11 +1,17 @@
+import { useTranslation } from "react-i18next";
 
 
-const colectionMenuItems123 = [
-    "POPULAR GAMES",
-    "TOP DEALS",
-    "NEW RELEASE",
-    "FREE TO PLAY",
-    "UNDER 10$",
+function colectionMenuItems123() {
+  const { t } = useTranslation();
+  return [
+    t("POPULAR_GAMES"),
+    t("TOP_DEALS"),
+    t("NEW_RELEASE"),
+    t("FREE_TO_PLAY"),
+    t("UNDER_10$")
   ];
-  
-export default colectionMenuItems123;
+}
+
+export function mapColectionMenuItems123(callback) {
+  return colectionMenuItems123().map(callback);
+}

@@ -5,8 +5,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 29.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 51,
@@ -15,7 +16,7 @@ const gamesData = [
     windows: true,
     price: 59.99,
     image: "https://img.zonared.com/images/noticias/portada/64000/64013-h.jpg",
-    type : "TOP SELLERS",
+    type: "TOP SELLERS",
   },
   {
     id: 52,
@@ -23,8 +24,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 19.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 53,
@@ -32,17 +34,19 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 19.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
-  { 
+  {
     id: 54,
     name: "Cyberpunk 2077",
     steam: false,
     windows: true,
     price: 45.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 55,
@@ -50,8 +54,9 @@ const gamesData = [
     steam: false,
     windows: true,
     price: 59.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 56,
@@ -59,8 +64,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 4.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 57,
@@ -68,17 +74,19 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 1.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/381210/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/381210/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 58,
-    name :  "Dead Cells",
+    name: "Dead Cells",
     steam: true,
     windows: true,
     price: 4.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/588650/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/588650/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 59,
@@ -86,8 +94,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 59.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/678950/capsule_616x353.jpg?t=1620938400",
-    type : "TOP SELLERS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/678950/capsule_616x353.jpg?t=1620938400",
+    type: "TOP SELLERS",
   },
   {
     id: 60,
@@ -95,8 +104,9 @@ const gamesData = [
     steam: false,
     windows: true,
     price: 59.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/812140/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/812140/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
   {
     id: 61,
@@ -104,8 +114,9 @@ const gamesData = [
     steam: false,
     windows: true,
     price: 8.99,
-    image: "https://th.bing.com/th/id/OIP.lu5Q1h5SpW_XD5hvZvrx1wHaEK?pid=ImgDet&rs=1",
-    type : "TOP DEALS",
+    image:
+      "https://th.bing.com/th/id/OIP.lu5Q1h5SpW_XD5hvZvrx1wHaEK?pid=ImgDet&rs=1",
+    type: "TOP DEALS",
   },
   {
     id: 62,
@@ -113,8 +124,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 49.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/633230/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/633230/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
   {
     id: 63,
@@ -122,17 +134,19 @@ const gamesData = [
     steam: false,
     windows: true,
     price: 9.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1234560/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1234560/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
-  { 
+  {
     id: 64,
     name: "Call of Duty: Black Ops Cold War",
     steam: false,
     windows: true,
     price: 59.99,
-    image: "https://th.bing.com/th/id/R.9c565e8ede3c30494ee98dc98925622b?rik=%2fxrXRII9Zd90yQ&pid=ImgRaw&r=0",
-    type : "TOP DEALS",
+    image:
+      "https://th.bing.com/th/id/R.9c565e8ede3c30494ee98dc98925622b?rik=%2fxrXRII9Zd90yQ&pid=ImgRaw&r=0",
+    type: "TOP DEALS",
   },
   {
     id: 65,
@@ -140,8 +154,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 59.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/397540/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/397540/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
   {
     id: 66,
@@ -149,8 +164,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 19.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1120750/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1120750/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
   {
     id: 67,
@@ -158,8 +174,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 19.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/242760/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/242760/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
   {
     id: 68,
@@ -167,8 +184,9 @@ const gamesData = [
     steam: false,
     windows: true,
     price: 59.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/680420/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/680420/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
   {
     id: 69,
@@ -176,8 +194,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 14.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/250900/capsule_616x353.jpg?t=1620938400",
-    type : "TOP DEALS",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/250900/capsule_616x353.jpg?t=1620938400",
+    type: "TOP DEALS",
   },
   {
     id: 70,
@@ -185,8 +204,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 9.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/401920/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/401920/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 71,
@@ -194,8 +214,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 9.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/620/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/620/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 72,
@@ -203,8 +224,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 2.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/252490/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/252490/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 73,
@@ -212,8 +234,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 7.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/379430/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/379430/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 74,
@@ -221,8 +244,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 19.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 75,
@@ -230,8 +254,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 49.99,
-    image: "https://th.bing.com/th/id/OIP.VK1FLPs5XPtOXCs-L-uzNgHaEK?pid=ImgDet&rs=1",
-    type : "NEW RELEASES",
+    image:
+      "https://th.bing.com/th/id/OIP.VK1FLPs5XPtOXCs-L-uzNgHaEK?pid=ImgDet&rs=1",
+    type: "NEW RELEASES",
   },
   {
     id: 76,
@@ -239,8 +264,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 19.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/39210/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/39210/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 77,
@@ -248,8 +274,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 19.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/238320/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/238320/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 78,
@@ -257,8 +284,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 29.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/414700/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/414700/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 79,
@@ -266,8 +294,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: 8.99,
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/273300/capsule_616x353.jpg?t=1620938400",
-    type : "NEW RELEASES",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/273300/capsule_616x353.jpg?t=1620938400",
+    type: "NEW RELEASES",
   },
   {
     id: 80,
@@ -275,8 +304,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://th.bing.com/th/id/OIP.SjCaSz6-_2_9jAMO6KuTSAAAAA?pid=ImgDet&rs=1",
-    type : "FREE TO PLAY",
+    image:
+      "https://th.bing.com/th/id/OIP.SjCaSz6-_2_9jAMO6KuTSAAAAA?pid=ImgDet&rs=1",
+    type: "FREE TO PLAY",
   },
   {
     id: 81,
@@ -284,8 +314,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 82,
@@ -293,8 +324,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/570/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/570/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 83,
@@ -302,8 +334,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/440/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/440/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 84,
@@ -311,8 +344,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/230410/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/230410/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 85,
@@ -320,8 +354,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/238960/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/238960/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 86,
@@ -329,8 +364,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/1085660/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/1085660/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 87,
@@ -338,8 +374,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/291550/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/291550/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 88,
@@ -347,8 +384,9 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/444090/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/444090/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
   {
     id: 89,
@@ -356,9 +394,10 @@ const gamesData = [
     steam: true,
     windows: true,
     price: "FREE",
-    image: "https://cdn.cloudflare.steamstatic.com/steam/apps/200210/capsule_616x353.jpg?t=1620938400",
-    type : "FREE TO PLAY",
+    image:
+      "https://cdn.cloudflare.steamstatic.com/steam/apps/200210/capsule_616x353.jpg?t=1620938400",
+    type: "FREE TO PLAY",
   },
-]
+];
 
 export default gamesData;

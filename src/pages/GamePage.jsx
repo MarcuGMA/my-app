@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import { Header } from "../components";
 import Footer from "../components/footer";
-import colectionMenuItems123 from "../api/headerMenu";
+
 import TopElementsGamePage from "../components/gamePage/TopElements/TopElements";
 import Wrapper from "../components/helpers/wrapper";
 import GameStats from "../components/gamePage/GameStats/GameStats";
@@ -36,7 +36,7 @@ function GamePage() {
 
   return (
     <div>
-      <Header colectionMenuItems={colectionMenuItems123} />
+      <Header />
       <TopElementsGamePage game={game} />
       <Wrapper />
       <GameStats />

@@ -91,28 +91,6 @@ const SwiperElementsData = [
 
         As elite operatives, you will follow the trail of a shadowy figure named Perseus who is on a mission to destabilize the global balance of power and change the course of history. Descend into the dark center of this global conspiracy alongside iconic characters Woods, Mason and Hudson, and a new cast of operatives attempting to stop a plot decades in the making.`,
   },
-  {
-    id: 5,
-    name: "Grand Theft Auto V",
-    price: "€29.99",
-    image:
-      "https://th.bing.com/th/id/R.9ed0e76ace4c7b42211ce405f33a530d?rik=3rgjmMCZoVAs8g&pid=ImgRaw&r=0",
-    bgImage:
-      "https://th.bing.com/th/id/R.b127bb46a231f7f86573f7dcb71565c5?rik=kBRoFuN%2bOWpLuQ&pid=ImgRaw&r=0",
-    image1:
-      "https://th.bing.com/th/id/R.9ed0e76ace4c7b42211ce405f33a530d?rik=3rgjmMCZoVAs8g&pid=ImgRaw&r=0",
-    image2:
-      "https://www.psu.com/wp/wp-content/uploads/2020/11/Marvels-Spider-Man-Remastered-PS5-Review.jpg",
-    gameStore: "Steam",
-    swiper: true,
-    type: "top-deal",
-    steam: true,
-    windows: true,
-    apple: false,
-    about: `Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.
-        The game offers players a huge range of PC-specific customization options, including over 25 separate configurable settings for texture quality, shaders, tessellation, anti-aliasing and more, as well as support and extensive customization for mouse and keyboard controls. Additional options include a
-         population density slider to control car and pedestrian traffic, as well as dual and triple monitor support, 3D compatibility, and plug-and-play controller support.`,
-  },
 ]
 
 export default SwiperElementsData

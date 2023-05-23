@@ -4,8 +4,10 @@ import gamesData from "../../api/gameData";
 // import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function GameList() {
+  const { t } = useTranslation();
   const [selectedItem, setSelectedItem] = useState("TOP SELLERS");
 
   const navigate = useNavigate();
@@ -41,7 +43,7 @@ function GameList() {
                 </div>
                 <div className="itemInfoRight">
                   <p>{game.price}</p>
-                  <span className="spanInfo">from</span>
+                  <span className="spanInfo">{t("FROM")}</span>
                 </div>
               </div>
             </div>
@@ -63,31 +65,31 @@ function GameList() {
               className={selectedItem === "TOP SELLERS" ? "selected" : ""}
               onClick={() => handleItemClick("TOP SELLERS")}
             >
-              TOP SELLERS
+              {t("TOP_SELLERS")}
             </li>
             <li
               className={selectedItem === "TOP DEALS" ? "selected" : ""}
               onClick={() => handleItemClick("TOP DEALS")}
             >
-              TOP DEALS
+              {t("TOP_DEALS")}
             </li>
             <li
               className={selectedItem === "NEW RELEASES" ? "selected" : ""}
               onClick={() => handleItemClick("NEW RELEASES")}
             >
-              NEW RELEASES
+              {t("NEW_RELEASE")}
             </li>
             <li
               className={selectedItem === "FREE TO PLAY" ? "selected" : ""}
               onClick={() => handleItemClick("FREE TO PLAY")}
             >
-              FREE TO PLAY
+             {t("FREE_TO_PLAY")}
             </li>
           </ul>
           <Category data={populateData(selectedItem)} />
         </div>
         <div className="gameListAditional">
-          <h2>CHEAP GAMES</h2>
+          <h2>{t("CHEAP_GAMES")}</h2>
           <div className="gameListAditionalItems">
             {cheapGames.map((game) => (
               <div className="gameListAditionalItem" key={game.id} onClick={() => handleGameItemClick(game.id)}>

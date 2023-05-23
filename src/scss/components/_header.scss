@@ -289,5 +289,29 @@ header {
         }
       }
     }
+
+    .translate {
+      width: 100px;
+
+      .customSelect {
+        background-color: transparent;
+        border: none;
+        color: $white-text;
+        font-size: $size-0;
+        font-weight: $font-weight-2;
+
+        option {
+          background-color: $background-elements;
+          color: $white-text;
+          font-size: $size-0;
+          font-weight: $font-weight-2;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+  
+  .hamburgerContainer{
+    display: none;
   }
 }

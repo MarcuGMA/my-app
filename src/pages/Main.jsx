@@ -10,10 +10,12 @@ import NewsMain from "../components/main/newsMain";
 import MostPlayed from "../components/main/mostPlayed";
 import TrendGame from "../components/main/trendGame";
 import { Link, useNavigate } from "react-router-dom";
-import colectionMenuItems123 from "../api/headerMenu";
+import { useTranslation } from "react-i18next";
+// import colectionMenuItems123 from "../api/headerMenu";
 
 function Main() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const styles = {
     background: `linear-gradient(180deg, rgba(16,25,36,1) 5%, rgba(16,25,36,0.4) 50%, rgba(16,25,36,1) 85%), url(https://images2.alphacoders.com/976/976068.jpg) no-repeat center center `,
@@ -27,13 +29,13 @@ function Main() {
 
   return (
     <div className="home-page">
-      <Header colectionMenuItems={colectionMenuItems123} />
+      <Header  />
       <div className="topElements" style={styles}>
         <img src="/public/media/images/gow.jpg" alt="" />
         <div className="wrapper">
           <div className="topGame">
             <h1>God of War</h1>
-            <p>Free</p>
+            <p>{t("FREE")}</p>
             <ButtonHeader onClick={onHeaderButtonClick} />
           </div>
         </div>

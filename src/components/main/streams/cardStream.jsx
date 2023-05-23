@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function CardStream() {
+  const { t } = useTranslation();
+
   return (
     <div className="streamTwichItem">
       <img
@@ -9,7 +12,7 @@ function CardStream() {
       />
       <div className="gameName">
         <h2>Stream</h2>
-        <p>123412 people</p>
+        <p>123412 {t("PEOPLE_STREAMS")}</p>
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
 import React from "react";
 import gameData from "../../api/gameData";
+import { useTranslation } from "react-i18next";
 
 function TrendGame() {
+  const { t } = useTranslation();
   const gameTitles = gameData.filter((game) => game.name);
   gameTitles.length = 12;
 
@@ -12,7 +14,7 @@ function TrendGame() {
 
   return (
     <div className="trendGame">
-      <h1>WHAT'S EVERYONE PLAYING?</h1>
+      <h1>{t("WHAT'S_EVERYONE_PLAYING?")}</h1>
       <div className="trendGameContainer">
         <div className="gameContainer">
           <img
@@ -22,17 +24,17 @@ function TrendGame() {
           <div className="gameInfo">
             <div className="curentPlayers">
               <p>23.423</p>
-              <span>Curent Players</span>
+              <span>{t("Curent_Players")}</span>
             </div>
             <div className="curentPlayers">
               <p>534.342</p>
-              <span>Curent Peak</span>
+              <span>{t("Curent_Peak")}</span>
             </div>
           </div>
         </div>
         <div className="listContainer">
           <div className="trendListGames">
-            <h3>GAME</h3>
+            <h3>{t("GAME")}</h3>
             <ul>
               {gameTitles.map((game) => (
                 <li key={game.id}>{game.name}</li>
@@ -40,7 +42,7 @@ function TrendGame() {
             </ul>
           </div>
           <div className="trendCurrentPlayers">
-            <h3>CURRENT PLAYERS</h3>
+            <h3>{t("CURENT_PLAYERS")}</h3>
             <ul>
               {randomNumbers.map((number) => (
                 <li>{number}</li>
@@ -48,7 +50,7 @@ function TrendGame() {
             </ul>
           </div>
           <div className="trendPeak">
-            <h3>TREND PEAK</h3>
+            <h3>{t("TREND_PEAK")}</h3>
             <ul>
               {randomNumbers.map((number) => (
                 <li>{number}</li>

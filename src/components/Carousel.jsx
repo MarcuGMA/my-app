@@ -9,20 +9,18 @@ import { ButtonHeader } from "../components/buttons";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 export const MySwiper = () => {
-  const onAutoplayTimeLeft = (s, time, progress) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  };
-
   const handleGameItemClick = (id) => {
     localStorage.setItem("gameId", id);
   };
+
+  const SlidesPerView = window.innerWidth < 768 ? 1 : 3;
+  console.log(SlidesPerView);
 
   return (
     <Swiper
       className="mySwiper"
       spaceBetween={100}
-      slidesPerView={3}
+      slidesPerView={SlidesPerView}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
@@ -37,7 +35,7 @@ export const MySwiper = () => {
     >
       {SwiperElementsData.map((item) =>
         item.swiper ? (
-          <SwiperSlide key={item.id}  onClick={() => handleGameItemClick(item.id)}>
+          <SwiperSlide key={item.id} onClick={() => handleGameItemClick(item.id)}>
             <div className="swiperElement">
               <img src={item.image} alt="" />
               <div className="swiperElement-info">

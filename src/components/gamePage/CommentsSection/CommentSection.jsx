@@ -1,10 +1,12 @@
 import React from "react";
 import CommentEl from "./CommentEl";
+import { useTranslation } from "react-i18next";
 
 function CommentSection() {
+  const { t } = useTranslation();
   return (
     <div className="commentsSection wrapper">
-      <h1>Comment Section</h1>
+      <h1>{t("Comment_Section")}</h1>
       <div className="commentBox">
         <CommentEl
           user="King1"

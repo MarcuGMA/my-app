@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import colectionMenuItems123 from "../api/headerMenu";
+// import colectionMenuItems123 from "../api/headerMenu";
 import Divider from "../components/helpers/dividing";
 import LeftCategories from "../components/CategoriesGames/leftCategories/leftCategories";
 import RightCategories from "../components/CategoriesGames/rightCategories/rightCategories";
@@ -16,7 +16,7 @@ function CategoriesGames() {
   return (
     <>
       <div className="wrapper">
-        <Header colectionMenuItems={colectionMenuItems123} />
+        <Header  />
         <Divider />
         <div className="categoriesGamesContainer">
           <LeftCategories

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export function AutentifButton({ text, ...props }) {
   return (
@@ -9,7 +10,8 @@ export function AutentifButton({ text, ...props }) {
 }
 
 export function ButtonHeader({onClick=()=>{}}) {
-  return <button type="button" className="gameElement-button" onClick={onClick}>VIEW GAME</button>;
+  const { t } = useTranslation();
+  return <button type="button" className="gameElement-button" onClick={onClick}>{t("VIEW_GAME")}</button>;
 }
 
 export function ButtonGamesInfo({text, ...props}) {

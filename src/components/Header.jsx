@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 import SuccessAlert from "./materialui/succes";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { mapColectionMenuItems123 } from "./../api/headerMenu";
+import HamburgerMenu from "./materialui/HamburgerMenu";
 
-function Header({ colectionMenuItems, onItemClick }) {
+function Header({ onItemClick }) {
   const [scroll, setScroll] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [success, setSuccess] = useState(false);
+  const { t, i18n } = useTranslation();
 
   //Scroll
   useEffect(() => {
@@ -33,6 +37,11 @@ function Header({ colectionMenuItems, onItemClick }) {
       // setSuccess(true);
     }
   }, []);
+
+  const changeLanguageHandler = (e) => {
+    const languageValue = e.target.value;
+    i18n.changeLanguage(languageValue);
+  };
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -70,36 +79,32 @@ function Header({ colectionMenuItems, onItemClick }) {
           <input
             className="searchBarHeader_input"
             type="text"
-            placeholder="Search"
+            placeholder={t("SEARCH")}
           />
         </div>
         <div className="categoriesHeader">
-          <p>Colection</p>
+          <p>{t("Collection")}</p>
           <div className="colectionList wrapper">
             <div className="colectionMenu">
-              <h1>MENU</h1>
+              <h1>{t("MENU")}</h1>
               <div className="colectionMenuList">
                 <ul>
-                  {colectionMenuItems.map((item) => (
+                  {mapColectionMenuItems123((item) => (
                     <li key={item} onClick={onItemClick}>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <Link to="/collections">
-                  <p>
-                    COLLECTIONS
-                  </p>
+                  <p>{t("COLLECTIONS")}</p>
                 </Link>
                 <Link to="/about-us">
-                  <p>
-                    ABOUT US
-                  </p>
+                  <p>{t("ABOUT_US")}</p>
                 </Link>
               </div>
             </div>
             <div className="colectionSuggestion">
-              <h1>SUGGESTION</h1>
+              <h1>{t("SUGGESTION")}</h1>
               <div className="colectionSuggestionElements">
                 <div className="SuggestionElement">
                   <div className="sugestionElementImage">
@@ -127,7 +132,7 @@ function Header({ colectionMenuItems, onItemClick }) {
                     </div>
                     <div className="elementTextPrice">
                       <p> €80.7</p>
-                      <span className="textFrom">from</span>
+                      <span className="textFrom">{t("FROM")}</span>
                     </div>
                   </div>
                 </div>
@@ -157,7 +162,7 @@ function Header({ colectionMenuItems, onItemClick }) {
                     </div>
                     <div className="elementTextPrice">
                       <p> €80.7</p>
-                      <span className="textFrom">from</span>
+                      <span className="textFrom">{t("FROM")}</span>
                     </div>
                   </div>
                 </div>
@@ -187,13 +192,13 @@ function Header({ colectionMenuItems, onItemClick }) {
                     </div>
                     <div className="elementTextPrice">
                       <p> €80.7</p>
-                      <span className="textFrom">from</span>
+                      <span className="textFrom">{t("FROM")}</span>
                     </div>
                   </div>
                 </div>
               </div>
               <Link to="/categories">
-                <button className="suggestionElements-button">SEE ALL</button>
+                <button className="suggestionElements-button">{t("SEE_ALL")}</button>
               </Link>
             </div>
           </div>
@@ -202,18 +207,25 @@ function Header({ colectionMenuItems, onItemClick }) {
           {isLoggedIn ? (
             <div className="logout">
               {/* <Link className="loginHeaderLink" to="/login"> */}
-              <p>Profile</p>
+              <p>{t("PROFILE")}</p>
               {/* </Link> */}
               <button className="logoutButton" onClick={handleLogout}>
-                Logout
+                {t("LOGOUT")}
               </button>
             </div>
           ) : (
             <Link className="loginHeaderLink" to="/login">
-              <p>Login / Register</p>
+              <p>{t("LOGIN_REGISTER")}</p>
             </Link>
           )}
         </div>
+        <div className="translate">
+          <select className="customSelect" onChange={changeLanguageHandler}>
+            <option value="en">English</option>
+            <option value="ro">Română</option>
+          </select>
+        </div>
+        <HamburgerMenu />
       </div>
     </header>
   );

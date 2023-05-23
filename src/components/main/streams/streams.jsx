@@ -1,12 +1,15 @@
 import React from "react";
 import CardGame from "./cardGame";
 import CardStream from "./cardStream";
+import { useTranslation } from "react-i18next";
 
 function Streams() {
+  const { t } = useTranslation();
+
   return (
     <div className="streamsContainer">
       <div className="streamBox">
-        <h1>STREAMS</h1>
+        <h1>{t("STREAMS")}</h1>
         <div className="boxStream">
           <div className="streamRow">
             <CardGame />

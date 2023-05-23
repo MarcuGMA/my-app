@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function GamePageInfo({game}) {
+  const { t } = useTranslation();
+
   return (
     <div className="gamePageInfo">
       <div className="gameInfoImageCarousel">
@@ -34,7 +37,7 @@ function GamePageInfo({game}) {
         <h1>{game.name}</h1>
         <div className="aditionalInfo">
           <div className="releaseDate">
-            <h3>Release Date:</h3>
+            <h3>{t("Release_Date")}</h3>
             <p>12/12/2020</p>
           </div>
           <div className="gameGenres">
@@ -45,16 +48,10 @@ function GamePageInfo({game}) {
         </div>
         <div className="gameDescription">
           <p>
-            Dezvoltat de Insomniac Games în colaborare cu Marvel și optimizat
-            pentru PC de Nixxes Software, Marvel's Spider-Man: Versiunea
-            îmbunătățită pe PC prezintă un Peter Parker experimentat care luptă
-            împotriva criminalității și a răufăcătorilor celebri în orașul New
-            York creat de Marvel. Totodată, el se străduie din greu să păstreze
-            echilibrul între viața personală haotică și carieră în timp ce
-            soarta orașului New York din universul Marvel atârnă pe umerii lui.
+           {t("Game_Description")}
           </p>
         </div>
-        <button className="notifyButton">NOTIFY ME</button>
+        <button className="notifyButton">{t("Notify_Me")}</button>
       </div>
     </div>
   );

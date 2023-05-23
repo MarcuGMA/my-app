@@ -8,19 +8,15 @@ import SuccessAlert from "../components/materialui/succes";
 import autentificationData from "../api/autentification";
 // import jwt from "jsonwebtoken";
 import { v4 as uuid } from "uuid";
+import { useTranslation } from "react-i18next";
 
 function Login() {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  // const toggleLogin = () => {
-  //   setIsLoggedIn((prevState) => !prevState);
-  // };
-
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleReset = () => {
     setSuccess(false);
@@ -63,54 +59,56 @@ function Login() {
         <Link to="/">
           <img src="/media/Logo/LOGO_GAMES.png" alt="" />
         </Link>
-        {success && <SuccessAlert message="Login successful" />}
-        {error && <ErrorAlert message="Invalid username or password" />}
+        {success && <SuccessAlert message={t("Login_Succesfull")} />}
+        {error && <ErrorAlert message={t("Invalid_Email_Or_Password")} />}
       </div>
       <div className="loginWrapper">
         <div className="login-wrapper-form">
-          <h1>Log in</h1>
+          <h1>{t("LOGIN")}</h1>
           <form action="">
             <AutentifInput
               type="text"
-              placeholder="Email or username"
+              placeholder={t("Email_or_Username")}
               value={username}
               onChange={(event) => setUsername(event.target.value)}
               onKeyPress={onKeyPress}
             />
             <AutentifInput
               type="password"
-              placeholder="Password"
+              placeholder={t("Password")}
               value={password}
               onChange={(event) => setPassword(event.target.value)}
               onKeyPress={onKeyPress}
             />
             {!success && (
               <Link to="/register">
-                <p>Register here if you don't have an account</p>
+                <p>{t("Register_Here")}</p>
               </Link>
             )}
-            {!success && <AutentifButton text="Login" onClick={handleSubmit} />}
+            {!success && (
+              <AutentifButton text={t("LOGIN")} onClick={handleSubmit} />
+            )}
           </form>
         </div>
         <div className="login-wrapper-icons">
-          <p>Or</p>
+          <p>{t("Or")}</p>
           <div className="login-wrapper-icons-el elGoogle">
             <div className="elIcon">
               <img src="./media/icons/google.png" alt="" />
             </div>
-            <p>Sign Up with Google</p>
+            <p>{t("Login_With")} Google</p>
           </div>
           <div className="login-wrapper-icons-el elFacebook">
             <div className="elIcon">
               <img src="./media/icons/facebook.png" alt="" />
             </div>
-            <p>Sign Up with Facebook</p>
+            <p>{t("Login_With")} Facebook</p>
           </div>
           <div className="login-wrapper-icons-el elSteam">
             <div className="elIcon">
               <img src="./media/icons/steam.png" alt="" />
             </div>
-            <p>Sign Up with Steam</p>
+            <p>{t("Login_With")} Steam</p>
           </div>
         </div>
       </div>

@@ -1,0 +1,51 @@
+@media screen and (max-width: 767px) {
+  header {
+    justify-content: space-between;
+
+    .categoriesHeader {
+      display: none;
+    }
+
+    .loginHeader {
+      display: none;
+    }
+
+    .translate {
+      display: none;
+    }
+
+    .hamburgerContainer {
+      display: flex;
+
+      .hamburger-menu {
+        position: absolute;
+        top: 0;
+        width: 100vh;
+        height: 100vh;
+        background-color: $background-elements;
+        left: 0;
+        display: none;
+        overflow: hidden;
+        padding: 1rem;
+        flex-direction: column;
+
+        .hamburger-menuHeader {
+          width: 100%;
+          height: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content:flex-start;
+
+          h1 {
+            margin-left: 1rem;
+            color: $white-text;
+          }
+        }
+      }
+
+      .open {
+        display: flex;
+      }
+    }
+  }
+}

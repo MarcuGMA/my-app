@@ -5,6 +5,8 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import { useTranslation } from "react-i18next";
+import { t } from "i18next";
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -47,6 +49,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 function GameQuestions() {
+  
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -54,19 +57,17 @@ function GameQuestions() {
   };
   return (
     <div className="gameQuestions wrapper">
-      <h1>FREQUENTLY ASKED QUESTIONS?</h1>
+      <h1>{t("FREQUENTLY_ASKED_QUESTIONS")}</h1>
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography sx={{ fontSize: "1.5rem" }}>More about Game</Typography>
+          <Typography sx={{ fontSize: "1.5rem" }}>{t("Question_1")}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            The only aim in Rust is to survive. Everything wants you to die -
-            the island’s wildlife and other inhabitants, the environment, other
-            survivors. Do whatever it takes to last another night.
+           {t("Answer_1")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -76,12 +77,12 @@ function GameQuestions() {
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
           <Typography sx={{ fontSize: "1.5rem" }}>
-            Where can i download the game?
+          {t("Question_2")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            You should log in to Steam in order to download the game and play.
+           {t("Answer_2")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -91,12 +92,12 @@ function GameQuestions() {
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
           <Typography sx={{ fontSize: "1.5rem" }}>
-            Where can i buy it?
+          {t("Question_3")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            List of official stores you can buy Rust: Steam
+           {t("Answer_3")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -106,14 +107,12 @@ function GameQuestions() {
       >
         <AccordionSummary aria-controls="panel4d-content" id="panel4d-header">
           <Typography sx={{ fontSize: "1.5rem" }}>
-            How many GB is this game?
+          {t("Question_4")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            This game is approximately 20 GB. However, it is recommended to have
-            a bit more than 20 GB on your disk space in case of an insufficient
-            storage problem.
+           {t("Answer_4")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -123,14 +122,12 @@ function GameQuestions() {
       >
         <AccordionSummary aria-controls="panel5d-content" id="panel5d-header">
           <Typography sx={{ fontSize: "1.5rem" }}>
-            What is the MetaCritic score if this game?
+          {t("Question_5")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            This Game has an overall Metacritic score of 69. But Rust might not
-            be such a good or bad game. We recommend you to read some reviews
-            and watch gameplay clips on Twitch.
+          {t("Answer_5")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -140,14 +137,12 @@ function GameQuestions() {
       >
         <AccordionSummary aria-controls="panel6d-content" id="panel6d-header">
           <Typography sx={{ fontSize: "1.5rem" }}>
-            What is the age rating for This Game?
+          {t("Question_6")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            This game has an age rating of 17+. Some countries may suggest
-            different age ratings. For more information on age ratings, please
-            see: wiki.
+            {t("Answer_6")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -157,17 +152,12 @@ function GameQuestions() {
       >
         <AccordionSummary aria-controls="panel7d-content" id="panel7d-header">
           <Typography sx={{ fontSize: "1.5rem" }}>
-            What is the language support for This Game?
+          {t("Question_7")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            Supported languages are as follows: English, French, Italian,
-            German, Spanish - Spain, Japanese, Korean, Russian, Simplified
-            Chinese, Ukrainian, Polish, Turkish, Arabic, Czech, Danish, Dutch,
-            Finnish, Greek, Norwegian, Portuguese - Brazil, Spanish - Latin
-            America, Swedish, Traditional Chinese, Vietnamese, Portuguese -
-            Portugal
+            {t("Answer_7")}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -177,12 +167,12 @@ function GameQuestions() {
       >
         <AccordionSummary aria-controls="panel8d-content" id="panel8d-header">
           <Typography sx={{ fontSize: "1.5rem" }}>
-            Is there multiplayer in This Game?
+          {t("Question_8")}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ fontSize: "1.5rem" }}>
-            Yes, it supports multiplayer mode.
+            {t("Answer_8")}
           </Typography>
         </AccordionDetails>
       </Accordion>
