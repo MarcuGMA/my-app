@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperElementsData from "../api/gamesData";
+import gamesData from "../api/gameData";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "swiper/scss/scrollbar";
 import { ButtonHeader } from "../components/buttons";
+import { Link } from "react-router-dom";
 
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -33,9 +34,12 @@ export const MySwiper = () => {
       // onSwiper={(swiper) => console.log(swiper)}
       // onSlideChange={() => console.log("slide change")}
     >
-      {SwiperElementsData.map((item) =>
+      {gamesData.map((item) =>
         item.swiper ? (
-          <SwiperSlide key={item.id} onClick={() => handleGameItemClick(item.id)}>
+          <SwiperSlide
+            key={item.id}
+            onClick={() => handleGameItemClick(item.id)}
+          >
             <div className="swiperElement">
               <img src={item.image} alt="" />
               <div className="swiperElement-info">
@@ -45,11 +49,13 @@ export const MySwiper = () => {
                 </div>
                 <div className="line" />
                 <div className="swiperElement-info-store">
-                  <p>{item.price}</p>
+                  <p>${item.price}</p>
                   <p>{item.gameStore}</p>
                 </div>
                 <div className="line" />
-                <ButtonHeader>VIEW GAME</ButtonHeader>
+                <Link to={`/gamePage/${item.id}`}>
+                  <ButtonHeader>VIEW GAME</ButtonHeader>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

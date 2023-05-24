@@ -24,12 +24,12 @@ function Main() {
   };
 
   const onHeaderButtonClick = () => {
-    navigate("/gamePage/74");
+    navigate("/gamePage/89");
   };
 
   return (
     <div className="home-page">
-      <Header  />
+      <Header />
       <div className="topElements" style={styles}>
         <img src="/public/media/images/gow.jpg" alt="" />
         <div className="wrapper">

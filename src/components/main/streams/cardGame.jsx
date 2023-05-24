@@ -1,5 +1,6 @@
 import React from "react";
 import { ButtonHeader } from "../../buttons";
+import { Link } from "react-router-dom";
 
 function CardGame() {
   return (
@@ -10,7 +11,9 @@ function CardGame() {
       />
       <div className="gameName">
         <h2>Overwatch 2</h2>
-        <ButtonHeader text="View game" />
+        <Link to="/gamePage/82">
+          <ButtonHeader text="View game" />
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { Header } from "../components";
 import Footer from "../components/footer";
 
@@ -11,6 +11,7 @@ import GameQuestions from "../components/gamePage/GameQuestions/GameQuestions";
 import InfoSection from "../components/gamePage/infoSection/infoSection";
 import CommentSection from "../components/gamePage/CommentsSection/CommentSection";
 import gamesData from "../api/gameData";
+import ProgressCircle from "../components/materialui/ProgressCircle";
 
 function GamePage() {
   const { id } = useParams();
@@ -20,19 +21,25 @@ function GamePage() {
 
   useEffect(() => {
     if (!gameId) {
-      return ;
+      return;
     }
 
     const selectedGame = gamesData.find((game) => game.id === gameId);
 
     if (selectedGame) {
       setGame(selectedGame);
-  }
+    }
   }, [gameId]);
 
- if(!game) {
-  return <h1>Please wait ....</h1>
- }
+  if (!game) {
+    return <ProgressCircle />;
+  }
+
+  const notification = () => {  
+    return (
+    <InfoNotification/>
+    )
+  }
 
   return (
     <div>

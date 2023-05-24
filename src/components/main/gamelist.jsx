@@ -3,15 +3,16 @@ import { useState } from "react";
 import gamesData from "../../api/gameData";
 // import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ButtonGames } from "../buttons";
 
 function GameList() {
   const { t } = useTranslation();
   const [selectedItem, setSelectedItem] = useState("TOP SELLERS");
 
   const navigate = useNavigate();
-  
+
   const handleItemClick = (item) => {
     setSelectedItem(item);
   };
@@ -30,8 +31,10 @@ function GameList() {
       return (
         <div className="gameListItems">
           {data.data.map((game) => (
-            <div className="gameListItem" key={game.id}
-            onClick={() => handleGameItemClick(game.id)}
+            <div
+              className="gameListItem"
+              key={game.id}
+              onClick={() => handleGameItemClick(game.id)}
             >
               <img src={game.image} alt={game.name} />
               <div className="gameListItemInfo">
@@ -83,16 +86,23 @@ function GameList() {
               className={selectedItem === "FREE TO PLAY" ? "selected" : ""}
               onClick={() => handleItemClick("FREE TO PLAY")}
             >
-             {t("FREE_TO_PLAY")}
+              {t("FREE_TO_PLAY")}
             </li>
           </ul>
           <Category data={populateData(selectedItem)} />
+          <Link to="/categories">
+          <ButtonGames />
+          </Link>
         </div>
         <div className="gameListAditional">
           <h2>{t("CHEAP_GAMES")}</h2>
           <div className="gameListAditionalItems">
             {cheapGames.map((game) => (
-              <div className="gameListAditionalItem" key={game.id} onClick={() => handleGameItemClick(game.id)}>
+              <div
+                className="gameListAditionalItem"
+                key={game.id}
+                onClick={() => handleGameItemClick(game.id)}
+              >
                 <img src={game.image} alt={game.name} />
                 <div className="gameListAditionalItemInfo">
                   <p>${game.price}</p>

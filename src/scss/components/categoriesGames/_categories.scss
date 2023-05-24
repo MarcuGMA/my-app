@@ -127,14 +127,45 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        cursor: pointer;
 
         p {
-          cursor: pointer;
           font-size: $size-1;
           color: $white-text-70;
           margin: 0;
           padding: 0 1rem;
           transition: all 0.3s ease-in-out;
+        }
+
+        .filtersContainer {
+          width: 200px;
+          height: 130px;
+          background-color: $background-elements-head;
+          position: absolute;
+          top: 20px;
+          right: -30px;
+          border-radius: 10px;
+          padding: 1rem;
+
+          ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            width: 100%;
+             li {
+              font-size: $size-1;
+              color: $white-text-70;
+              cursor: pointer;
+              transition: all 0.2s ease-in-out;
+
+              &:hover {
+                color: $white-text;
+              }
+             }
+          }
         }
       }
     }

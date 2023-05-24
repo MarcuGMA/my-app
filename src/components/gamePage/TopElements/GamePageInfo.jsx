@@ -1,36 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-function GamePageInfo({game}) {
+function GamePageInfo({ game }) {
   const { t } = useTranslation();
+
+  const [showNotification, setShowNotification] = useState(false);
+
+  const handleNotifyClick = () => {
+    setShowNotification(true);
+  };
 
   return (
     <div className="gamePageInfo">
       <div className="gameInfoImageCarousel">
         <div className="imgBox">
           <div className="imgOverlay"></div>
-          <img
-            src="https://th.bing.com/th/id/OIP.aN28wlUM1zVXgOqNo0yHmwHaEK?pid=ImgDet&rs=1"
-            alt=""
-          />
+          <img src={game.imageBg} alt="" />
         </div>
         <div className="imgBox">
           <div className="imgOverlay"></div>
-          <img
-            src="https://geekculture.co/wp-content/uploads/2018/09/Geek-Review-Marvels-Spider-Man-9.jpg"
-            alt=""
-          />
+          <img src={game.imageBg} alt="" />
         </div>
         <div className="imgBox">
           <div className="imgOverlay"></div>
-          <img src="https://pbs.twimg.com/media/DVFpKVEUQAAL1Id.jpg" alt="" />
+          <img src={game.imageBg} alt="" />
         </div>
         <div className="imgBox">
           <div className="imgOverlay"></div>
-          <img
-            src="https://th.bing.com/th/id/OIP.tnQC81ty3r7DgdCStP_qYQHaEK?pid=ImgDet&w=1280&h=720&rs=1"
-            alt=""
-          />
+          <img src={game.imageBg} alt="" />
         </div>
       </div>
       <div className="gameInfoText">
@@ -47,11 +44,11 @@ function GamePageInfo({game}) {
           </div>
         </div>
         <div className="gameDescription">
-          <p>
-           {t("Game_Description")}
-          </p>
+          <p>{t("Game_Description")}</p>
         </div>
-        <button className="notifyButton">{t("Notify_Me")}</button>
+        <button className="notifyButton" onClick={handleNotifyClick}>
+          {t("Notify_Me")}
+        </button>
       </div>
     </div>
   );

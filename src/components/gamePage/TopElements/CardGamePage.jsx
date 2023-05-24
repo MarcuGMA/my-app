@@ -1,7 +1,6 @@
 import React from "react";
-import gamesData from "../../../api/gamesData";
 
-function CardGamePage() {
+function CardGamePage({game}) {
 
 
   return (
@@ -9,7 +8,7 @@ function CardGamePage() {
       <div className="cardGamePage__img">
         {/* src={game.image} */}
         <img
-          src="https://images.alphacoders.com/113/thumb-1920-1130234.jpg"
+          src={game.image}
           alt=""
         />
       </div>
