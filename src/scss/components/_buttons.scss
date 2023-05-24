@@ -1,20 +1,24 @@
 //header button
-
-.suggestionElements-button {
+.suggestionElements-buttonLink{
+  text-decoration: none;
   width: 100%;
-  height: 3rem;
-  border: 2px solid $gray-text;
-  border-radius: 0.5rem;
-  background-color: transparent;
-  color: $white-text-70;
-  font-size: $size-1;
-  font-weight: $font-weight-3;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
 
-  &:hover {
-    background-color: $background-elements;
-    color: $white-text;
+  .suggestionElements-button {
+    width: 100%;
+    height: 3rem;
+    border: 2px solid $gray-text;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: $white-text-70;
+    font-size: $size-1;
+    font-weight: $font-weight-3;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  
+    &:hover {
+      background-color: $background-elements;
+      color: $white-text;
+    }
   }
 }
 

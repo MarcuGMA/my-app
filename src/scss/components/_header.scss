@@ -44,6 +44,12 @@ header {
       }
     }
 
+    .searchMobile_icon {
+      display: none;
+      height: 2rem;
+      width: 2rem;
+    }
+
     .categoriesHeader {
       color: $white-text;
       text-decoration: none;
@@ -312,6 +318,10 @@ header {
   }
   
   .hamburgerContainer{
+    display: none;
+  }
+
+  .searchMobileContainer {
     display: none;
   }
 }

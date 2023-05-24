@@ -1,0 +1,24 @@
+@media screen and (max-width: 767px) {
+
+    .collectionContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .collectionHeader {
+            text-align: center;
+        }
+    
+        .collectionText{
+            width: 90%;
+        }
+
+        .gameListItem {
+            width: 90%;
+        }
+
+        .previewImageCollection{
+            width: 95%;
+        }
+    }
+}

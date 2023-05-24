@@ -2,6 +2,7 @@ import React from "react";
 import gameData from "../../api/gameData";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function MostPlayed() {
   const { t } = useTranslation();
@@ -13,7 +14,6 @@ function MostPlayed() {
   const handleGameItemClick = (id) => {
     localStorage.setItem("gameId", id);
     navigate(`/gamePage/${id}`);
-
   };
 
   return (
@@ -32,7 +32,9 @@ function MostPlayed() {
           </div>
         ))}
       </div>
-      <button className="mostPlayedButton">{t("SEE_ALL")}</button>;
+      <Link to="/categories">
+        <button className="mostPlayedButton">{t("SEE_ALL")}</button>;
+      </Link>
     </div>
   );
 }

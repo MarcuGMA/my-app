@@ -1,0 +1,40 @@
+@media screen and (max-width: 767px) {
+  .categoriesGamesContainer {
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      text-align: center;
+    }
+
+    .leftCategories {
+      width: 90%;
+    }
+
+    .rightCategories {
+      width: 90%;
+
+      .headRightCategories {
+        .filters {
+          width: 25%;
+        }
+      }
+
+      .categoriesElements {
+        .gameListItems {
+          .gameListItem {
+            width: 100%;
+            height: 400px;
+            flex-direction: column;
+
+            img {
+                width: 100%;
+                height: 80%;
+                object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

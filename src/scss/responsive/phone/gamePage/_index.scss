@@ -1,0 +1,96 @@
+@media screen and (max-width: 767px) {
+  .topElementsGamePage {
+    height: 200vh;
+    align-items: center;
+
+    .topElementsGamePageBox {
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-around;
+
+      .cardGamePage {
+        width: 80%;
+        height: 40%;
+      }
+
+      .gamePageInfo {
+        width: 90%;
+        height: 40%;
+      }
+    }
+  }
+
+  .gameStats {
+    height: auto;
+    h1 {
+      text-align: center;
+    }
+
+    .gameStatsContainer {
+      flex-direction: column;
+      justify-content: space-between;
+
+      .gameStatsElement {
+        width: 90%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .gameQuestions {
+    height: auto;
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .infoSection {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .aboutGames {
+      width: 90%;
+      p {
+        width: 90%;
+      }
+
+      h1 {
+        text-align: center;
+        padding: 10px;
+      }
+    }
+
+    .requirements {
+        width: 90%;
+        height: 100vh;
+
+        .requirements__content {
+            flex-direction: column;
+        }
+    }
+  }
+
+  .commentsSection {
+    display: flex;
+    align-items: center;
+  
+    h1 {
+        text-align: center;
+    }
+
+    .commentBox{
+        width: 90%;
+
+        .commentEl {
+            height: auto;
+
+            .commentElBody{
+                height: auto;
+            }
+        }
+    }
+
+  }
+}

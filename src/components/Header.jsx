@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { mapColectionMenuItems123 } from "./../api/headerMenu";
 import HamburgerMenu from "./materialui/HamburgerMenu";
+import SearchMobile from "./materialui/SearchMobile";
 
 function Header({ onItemClick }) {
   const [scroll, setScroll] = useState(false);
@@ -95,7 +96,7 @@ function Header({ onItemClick }) {
                     </li>
                   ))}
                 </ul>
-                <Link to="/collections">
+                <Link to="/collections" >
                   <p>{t("COLLECTIONS")}</p>
                 </Link>
                 <Link to="/about-us">
@@ -197,8 +198,10 @@ function Header({ onItemClick }) {
                   </div>
                 </div>
               </div>
-              <Link to="/categories">
-                <button className="suggestionElements-button">{t("SEE_ALL")}</button>
+              <Link to="/categories" className="suggestionElements-buttonLink">
+                <button className="suggestionElements-button">
+                  {t("SEE_ALL")}
+                </button>
               </Link>
             </div>
           </div>
@@ -225,6 +228,7 @@ function Header({ onItemClick }) {
             <option value="ro">Română</option>
           </select>
         </div>
+        <SearchMobile />
         <HamburgerMenu />
       </div>
     </header>
