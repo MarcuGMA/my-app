@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import gamesData from "../../../api/gameData";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { MenuCategories } from "./../../../api/menuCategories";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import gamesData from "../../../api/gameData";
+import { MenuCategories } from "./../../../api/menuCategories";
+
 
 function RightCategories({ selectedCategory }) {
   const { t } = useTranslation();
@@ -35,23 +36,26 @@ function RightCategories({ selectedCategory }) {
     if (!data) {
       return;
     }
-
+  
     if (selectedFilter === "Ascendent") {
-      return data.sort((a, b) => a.price - b.price);
+      return [...data].sort((a, b) => a.price - b.price);
     }
-
+  
     if (selectedFilter === "Descendent") {
-      return data.sort((a, b) => b.price - a.price);
+      return [...data].sort((a, b) => b.price - a.price);
     }
-
+  
     if (selectedFilter === "Price:Low to high") {
-      return data.sort((a, b) => a.price - b.price);
+      return [...data].sort((a, b) => a.price - b.price);
     }
-
+  
     if (selectedFilter === "Price:High to low") {
-      return data.sort((a, b) => b.price - a.price);
+      return [...data].sort((a, b) => b.price - a.price);
     }
+  
+    return data;
   };
+  
 
   const renderCategory = (data) => {
     if (!data) {
