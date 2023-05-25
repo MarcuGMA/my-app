@@ -1,7 +1,6 @@
 import React from "react";
 import { Header } from "../components";
 import Divider from "../components/helpers/dividing";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Wrapper from "../components/helpers/wrapper";
 import Footer from "../components/footer";
 import { useTranslation } from "react-i18next";
@@ -36,7 +35,6 @@ function Collections() {
             <div className="itemInfoLeft">
               <h3>Saints Row: The Third </h3>
               <div className="iconsInfo">
-                <FontAwesomeIcon icon="star" />
               </div>
             </div>
             <div className="itemInfoRight">
@@ -56,7 +54,6 @@ function Collections() {
             <div className="itemInfoLeft">
               <h3>Goat Simulator </h3>
               <div className="iconsInfo">
-                <FontAwesomeIcon icon="star" />
               </div>
             </div>
             <div className="itemInfoRight">
@@ -83,7 +80,6 @@ function Collections() {
             <div className="itemInfoLeft">
               <h3>High of Life</h3>
               <div className="iconsInfo">
-                <FontAwesomeIcon icon="star" />
               </div>
             </div>
             <div className="itemInfoRight">
@@ -110,7 +106,6 @@ function Collections() {
             <div className="itemInfoLeft">
               <h3>I am Bread</h3>
               <div className="iconsInfo">
-                <FontAwesomeIcon icon="star" />
               </div>
             </div>
             <div className="itemInfoRight">
@@ -130,7 +125,6 @@ function Collections() {
             <div className="itemInfoLeft">
               <h3>JazzPunk</h3>
               <div className="iconsInfo">
-                <FontAwesomeIcon icon="star" />
               </div>
             </div>
             <div className="itemInfoRight">

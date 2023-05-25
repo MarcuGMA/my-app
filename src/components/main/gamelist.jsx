@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import gamesData from "../../api/gameData";
 // import { useHistory } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ButtonGames } from "../buttons";
@@ -41,7 +40,6 @@ function GameList() {
                 <div className="itemInfoLeft">
                   <h3>{game.name}</h3>
                   <div className="iconsInfo">
-                    <FontAwesomeIcon icon="star" />
                   </div>
                 </div>
                 <div className="itemInfoRight">

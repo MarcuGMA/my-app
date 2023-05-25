@@ -10,6 +10,7 @@ function RightCategories({ selectedCategory }) {
   const { t } = useTranslation();
   const [dataToShow, setDataToShow] = useState(gamesData);
   const [showFilters, setShowFilters] = useState(false);
+  const [selectedFilter, setSelectedFilter] = useState("");
   const filtersRef = useRef(null);
   const navigate = useNavigate();
 
@@ -25,6 +26,33 @@ function RightCategories({ selectedCategory }) {
     setDataToShow(gamesData.filter(({ type }) => type === selectedCategory));
   }, [selectedCategory]);
 
+  const handleFiltersItemClick = (filter) => {
+    setSelectedFilter(filter);
+    setShowFilters(false);
+  };
+
+  const filterData = (data) => {
+    if (!data) {
+      return;
+    }
+
+    if (selectedFilter === "Ascendent") {
+      return data.sort((a, b) => a.price - b.price);
+    }
+
+    if (selectedFilter === "Descendent") {
+      return data.sort((a, b) => b.price - a.price);
+    }
+
+    if (selectedFilter === "Price:Low to high") {
+      return data.sort((a, b) => a.price - b.price);
+    }
+
+    if (selectedFilter === "Price:High to low") {
+      return data.sort((a, b) => b.price - a.price);
+    }
+  };
+
   const renderCategory = (data) => {
     if (!data) {
       return <h1>No Games data!!!</h1>;
@@ -34,7 +62,7 @@ function RightCategories({ selectedCategory }) {
       localStorage.setItem("gameId", gameId);
       navigate(`/gamePage/${gameId}`);
     };
-    
+
     return (
       <div className="gameListItems">
         {data.map((game) => (
@@ -90,16 +118,26 @@ function RightCategories({ selectedCategory }) {
           {showFilters && (
             <div className="filtersContainer">
               <ul>
-                <li>Ascendent</li>
-                <li>Descendent</li>
-                <li>Price:Low to high</li>
-                <li>Price:High to low</li>
+                <li onClick={() => handleFiltersItemClick("Ascendent")}>
+                  Ascendent
+                </li>
+                <li onClick={() => handleFiltersItemClick("Descendent")}>
+                  Descendent
+                </li>
+                <li onClick={() => handleFiltersItemClick("Price:Low to high")}>
+                  Price:Low to high
+                </li>
+                <li onClick={() => handleFiltersItemClick("Price:High to low")}>
+                  Price:High to low
+                </li>
               </ul>
             </div>
           )}
         </div>
       </div>
-      <div className="categoriesElements">{renderCategory(dataToShow)}</div>
+      <div className="categoriesElements">
+        {filterData(renderCategory(dataToShow))}
+      </div>
     </div>
   );
 }

@@ -16,16 +16,14 @@ function CategoriesGames() {
   return (
     <>
       <div className="wrapper">
-        <Header  />
+        <Header />
         <Divider />
         <div className="categoriesGamesContainer">
           <LeftCategories
             selectedCategory={selectedCategory}
             handleCategorySelect={handleCategorySelect}
           />
-          <RightCategories 
-            selectedCategory={selectedCategory}
-          />
+          <RightCategories selectedCategory={selectedCategory} />
         </div>
       </div>
       <Footer />
