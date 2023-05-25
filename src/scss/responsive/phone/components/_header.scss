@@ -56,6 +56,36 @@
             text-decoration: none;
             margin-right: 1rem;
           }
+
+          .logout {
+            color: $white-text-70;
+            font-size: $size-2;
+            text-decoration: none;
+            margin-right: 1rem;
+            width: 150px;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+    
+            .logoutButton {
+              color: $white-text-70;
+              font-size: $size-2;
+              text-decoration: none;
+              margin-right: 1rem;
+              background-color: transparent;
+              border: none;
+              cursor: pointer;
+    
+              svg {
+                width: 10px;
+                height: 10px;
+                fill: $white-text;
+              }
+            }
+          }
         }
 
         .colectionMobileList {

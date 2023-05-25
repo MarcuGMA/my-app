@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-function GameNews() {
+function GameNews({game}) {
   const { t } = useTranslation();
 
   return (
@@ -12,7 +12,7 @@ function GameNews() {
           <div className="content_row">
             <div className="content_row__item">
               <img
-                src="https://th.bing.com/th/id/OIP.aN28wlUM1zVXgOqNo0yHmwHaEK?pid=ImgDet&rs=1"
+                src={game.imageBg1}
                 alt=""
               />
               <h3>{t("NEWS")}</h3>
@@ -46,7 +46,7 @@ function GameNews() {
             </div>
             <div className="content_row__item">
               <img
-                src="https://geekculture.co/wp-content/uploads/2018/09/Geek-Review-Marvels-Spider-Man-9.jpg"
+                src={game.imageBg2}
                 alt=""
               />
               <h3>{t("NEWS")}</h3>
@@ -80,7 +80,7 @@ function GameNews() {
             </div>
             <div className="content_row__item">
               <img
-                src="https://pbs.twimg.com/media/DVFpKVEUQAAL1Id.jpg"
+                src={game.imageBg3}
                 alt=""
               />
               <h3>{t("NEWS")}</h3>

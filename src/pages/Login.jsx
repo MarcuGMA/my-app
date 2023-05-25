@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { AutentifButton } from "../components/buttons";
 import { AutentifInput } from "../components/autentification/forms";
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ErrorAlert from "../components/materialui/error";
 import SuccessAlert from "../components/materialui/succes";
-import autentificationData from "../api/autentification";
-// import jwt from "jsonwebtoken";
-import { v4 as uuid } from "uuid";
 import { useTranslation } from "react-i18next";
+import { v4 as uuid } from "uuid";
 
 function Login() {
   const [password, setPassword] = useState("");
@@ -28,15 +25,16 @@ function Login() {
 
     handleReset();
 
-    const checkTokenInLocalStorage = () => {
-      return localStorage.getItem("token") !== null;
-    };
+    const users = localStorage.getItem("users");
+    const usersArray = users ? JSON.parse(users) : [];
+    
+    const user = usersArray.find((user) => user.name === username);
+    console.log(user);
 
-    const user = autentificationData.find((user) => user.name === username);
     if (user) {
-      if (user.password === password && user.name === username) {
+      if (user.password === password && (user.name === username || user.email === username)) {
         setSuccess(true);
-        const token = uuid();
+        const token =uuid() ; // Replace with your token generation logic
         localStorage.setItem("token", token);
         navigate("/");
       } else {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-function GamePageInfo({ game }) {
+function GamePageInfo({ game,changeImage }) {
   const { t } = useTranslation();
 
   const [showNotification, setShowNotification] = useState(false);
@@ -13,21 +13,18 @@ function GamePageInfo({ game }) {
   return (
     <div className="gamePageInfo">
       <div className="gameInfoImageCarousel">
-        <div className="imgBox">
-          <div className="imgOverlay"></div>
-          <img src={game.imageBg} alt="" />
+        <div className="imgBox" >
+          <img src={game.imageBg1}  onClick={changeImage} alt="" />
+          {/* <div className="imgOverlay"></div> */}
         </div>
         <div className="imgBox">
-          <div className="imgOverlay"></div>
-          <img src={game.imageBg} alt="" />
+          <img src={game.imageBg2} onClick={changeImage} alt="" />
         </div>
         <div className="imgBox">
-          <div className="imgOverlay"></div>
-          <img src={game.imageBg} alt="" />
+          <img src={game.imageBg3} onClick={changeImage} alt="" />
         </div>
         <div className="imgBox">
-          <div className="imgOverlay"></div>
-          <img src={game.imageBg} alt="" />
+          <img src={game.imageBg4}  onClick={changeImage}alt="" />
         </div>
       </div>
       <div className="gameInfoText">

@@ -229,7 +229,11 @@ function Header({ onItemClick }) {
           </select>
         </div>
         <SearchMobile />
-        <HamburgerMenu />
+        <HamburgerMenu 
+           handleLogout = {handleLogout}
+          isLoggedIn={isLoggedIn}
+          setIsLoggedIn={setIsLoggedIn}
+        />
       </div>
     </header>
   );

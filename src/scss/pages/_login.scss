@@ -40,18 +40,18 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
-
         border-bottom: 1px solid $gray-text;
 
         input {
           width: 100%;
-          height: 35px;
+          height: 45px;
           border: none;
           background-color: $background-elements;
           border-radius: 10px;
           outline: none;
           padding-left: 10px;
           color: $white-text;
+          font-size: $size-1;
 
           &::placeholder {
             color: $gray-text;
@@ -64,7 +64,7 @@
         }
 
         p {
-          font-size: $size-0;
+          font-size: $size-1;
           font-weight: $font-weight-1;
           color: $gray-text;
           cursor: pointer;
@@ -80,12 +80,12 @@
 
         .autentificationButton {
           width: 100%;
-          height: 35px;
+          height: 45px;
           border: none;
           background-color: $purple-input;
           border: 1px solid $purple-components;
           color: $white-text;
-          font-size: $size-1;
+          font-size: $size-2;
           font-weight: $font-weight-2;
           cursor: pointer;
           outline: none;
@@ -147,7 +147,7 @@
           justify-content: flex-start;
           align-items: center;
           text-align: center;
-          padding-left: 70px;
+          padding-left: 100px;
           font-size: $size-1;
         }
 

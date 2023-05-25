@@ -8,10 +8,9 @@ import { useTranslation } from "react-i18next";
 import { mapColectionMenuItems123 } from "../../api/headerMenu";
 
 
-function HamburgerMenu(onItemClick) {
+function HamburgerMenu({handleLogout,onItemClick, isLoggedIn}) {
   const { t } = useTranslation();
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -20,11 +19,6 @@ function HamburgerMenu(onItemClick) {
     } else {
       document.body.style.overflow = ""; // Enable scrolling
     }
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setIsLoggedIn(false);
   };
 
   return (

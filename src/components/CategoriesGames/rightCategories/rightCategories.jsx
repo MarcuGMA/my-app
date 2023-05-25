@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import gamesData from "../../../api/gameData";
 import { MenuCategories } from "./../../../api/menuCategories";
 
-
 function RightCategories({ selectedCategory }) {
   const { t } = useTranslation();
   const [dataToShow, setDataToShow] = useState(gamesData);
@@ -36,26 +35,25 @@ function RightCategories({ selectedCategory }) {
     if (!data) {
       return;
     }
-  
+
     if (selectedFilter === "Ascendent") {
       return [...data].sort((a, b) => a.price - b.price);
     }
-  
+
     if (selectedFilter === "Descendent") {
       return [...data].sort((a, b) => b.price - a.price);
     }
-  
+
     if (selectedFilter === "Price:Low to high") {
       return [...data].sort((a, b) => a.price - b.price);
     }
-  
+
     if (selectedFilter === "Price:High to low") {
       return [...data].sort((a, b) => b.price - a.price);
     }
-  
+
     return data;
   };
-  
 
   const renderCategory = (data) => {
     if (!data) {
@@ -140,7 +138,7 @@ function RightCategories({ selectedCategory }) {
         </div>
       </div>
       <div className="categoriesElements">
-        {filterData(renderCategory(dataToShow))}
+        {renderCategory(filterData(dataToShow))}
       </div>
     </div>
   );
