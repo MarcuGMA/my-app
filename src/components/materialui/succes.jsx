@@ -7,11 +7,11 @@ function SuccessAlert({ message }) {
   const [visible, setVisible] = useState(true);
 
   const styles = {
-    position: "absolute",
-    top: "100%",
-    left: "55%",
-    right: "0",
-    zIndex: "9999",
+    // position: "absolute",
+    // top: "100%",
+    // left: "55%",
+    // right: "0",
+    // zIndex: "9999",
   };
 
 

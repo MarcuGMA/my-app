@@ -70,14 +70,21 @@ function Register() {
     }
   };
 
+  const onKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSubmit(event);
+    }
+  };
+
+
   return (
     <div className="login">
       <div className="headerLogo">
         <Link to="/">
           <img src="/media/Logo/LOGO_GAMES.png" alt="" />
         </Link>
-        {error && <ErrorAlert message={error} />}
         {success && <SuccessAlert message={t("Success_User")} />}
+        {error && <ErrorAlert message={error} />}
       </div>
       <div className="loginWrapper">
         <div className="login-wrapper-form">
@@ -88,24 +95,28 @@ function Register() {
               placeholder={t("Username")}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              onKeyPress={onKeyPress}
             />
             <AutentifInput
               type="text"
               placeholder={t("Email")}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              onKeyPress={onKeyPress}
             />
             <AutentifInput
               type="password"
               placeholder={t("Password")}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyPress={onKeyPress}
             />
             <AutentifInput
               type="password"
               placeholder={t("Repeat_Password")}
               value={repeatPassword}
               onChange={(e) => setRepeatPassword(e.target.value)}
+              onKeyPress={onKeyPress}
             />
             <Link to="/login">
               <p>{t("Login_Here")}</p>

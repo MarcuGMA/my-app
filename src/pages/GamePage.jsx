@@ -47,7 +47,7 @@ function GamePage() {
       <TopElementsGamePage game={game} />
       <Wrapper />
       <GameStats />
-      <GameNews />
+      <GameNews game={game} />
       <Wrapper />
       <GameQuestions />
       <Wrapper />
